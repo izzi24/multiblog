@@ -38,7 +38,7 @@ export default function Footer() {
         <div className=" lg:grid lg:grid-cols-2 lg:gap-4 sm:gap-2 ">
           <div>
             <input
-              className=" py-4 px-10 border-3 border-blue-300"
+              className=" py-4 px-10 border-3 border-blue-400"
               type="email"
               placeholder="Enter your Email"
             />
