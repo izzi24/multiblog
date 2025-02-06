@@ -1,0 +1,740 @@
+import { useEffect, useState } from "react";
+import Header from "../components/Header";
+import Header2 from "../components/Header2";
+import Hero from "../components/Hero";
+import Footer from "../components/Footer";
+
+import ImgD from "../images/5.jpg";
+import ImgE from "../images/6.jpg";
+import ImgF from "../images/7.jpg";
+import ImgG from "../images/39.jpg";
+import ImgH from "../images/9.jpg";
+import ImgI from "../images/14.jpg";
+import ImgJ from "../images/11.jpg";
+import ImgK from "../images/12.jpg";
+import ImgM from "../images/5.jpg";
+import ImgN from "../images/16.jpg";
+import ImgO from "../images/22.jpg";
+import ImgP from "../images/25.jpg";
+import ImgQ from "../images/39.jpg";
+import ImgR from "../images/7.jpg";
+import ImgS from "../images/15.jpg";
+import ImgT from "../images/6.jpg";
+import ImgTa from "../images/new1.jpg";
+import ImgTb from "../images/new2.jpg";
+import ImgTc from "../images/new3.jpg";
+import ImgTd from "../images/new4.jpg";
+import ImgTe from "../images/new5.jpg";
+import ImgTf from "../images/new6.jpg";
+import ImgTg from "../images/d1.jpg";
+import ImgTh from "../images/d2.jpg";
+import ImgTi from "../images/d3.jpg";
+import ImgTj from "../images/d4.jpg";
+import ImgTk from "../images/d5.jpg";
+import ImgTl from "../images/d6.jpg";
+import ImgTm from "../images/bax1.png";
+import ImgTn from "../images/bax2.png";
+import ImgTo from "../images/bax3.png";
+import ImgTp from "../images/bax4.png";
+import ImgTq from "../images/bax5.png";
+
+
+const arsenal = [
+  {
+    image: ImgTg,
+    bax: ImgTm,
+    icons: "pi-instagram",
+  },
+  {
+    image: ImgTh,
+    bax: ImgTn,
+    icons: "pi-instagram",
+  },
+  {
+    image: ImgTi,
+    bax: ImgTo,
+    icons: "pi-instagram",
+  },
+  {
+    image: ImgTj,
+    bax: ImgTp,
+    icons: "pi-instagram",
+  },
+  {
+    image: ImgTk,
+    bax: ImgTq,
+    icons: "pi-instagram",
+  },
+  {
+    image: ImgTl,
+    icons: "pi-instagram",
+  },
+];
+
+const Product = [
+  {
+    id: 1,
+    image: ImgTa,
+    date: "29 january 2025",
+    pText: "lorem ipsum dolor sit",
+    gText: "consectetur adipiscing elit",
+    author: "author by  emmanuel, 2 comment",
+  },
+  {
+    id: 2,
+    image: ImgTb,
+    date: "29 january 2025",
+    pText: "lorem ipsum dolor sit",
+    gText: "consectetur adipiscing elit",
+    author: "author by roberts emmanuel, 2 comment",
+  },
+  {
+    id: 3,
+    image: ImgTc,
+    date: "29 january 2025",
+    pText: "lorem ipsum dolor sit",
+    gText: "consectetur adipiscing elit",
+    author: "author by roberts emmanuel, 2 comment",
+  },
+  {
+    id: 4,
+    image: ImgTd,
+    date: "29 january 2025",
+    pText: "lorem ipsum dolor sit",
+    gText: "consectetur adipiscing elit",
+    author: "author by adekemi emmanuel, 2 comment",
+  },
+  {
+    id: 5,
+    image: ImgTe,
+    date: "29 january 2025",
+    pText: "lorem ipsum dolor sit",
+    gText: "consectetur adipiscing elit",
+    author: "author by temitope emmanuel, 2 comment",
+  },
+  {
+    id: 6,
+    image: ImgTf,
+    date: "29 january 2025",
+    pText: "lorem ipsum dolor sit",
+    gText: "consectetur adipiscing elit",
+    author: "author by  emmanuel, 2 comment",
+  },
+];
+const images = [
+  {
+    image: ImgD,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle", "pi-circle", "pi-circle-fill"],
+    name: "crop top",
+    discount: "$117",
+    price: "$189",
+  },
+  {
+    image: ImgE,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle"],
+    name: "belted dress",
+    discount: "$47.98",
+    price: "$79.76",
+  },
+  {
+    image: ImgF,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle"],
+    name: "sleevless top",
+    discount: "$207.99",
+    price: "$270.87",
+  },
+  {
+    image: ImgG,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    name: "waist dress",
+    circle: ["pi-circle", "pi-circle", "pi-circle-fill"],
+    discount: "$69.09",
+    price: "$89.78",
+  },
+  {
+    image: ImgH,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle", "pi-circle-fill"],
+    name: "trim dress",
+    discount: "$240.99",
+    price: "$309.87",
+  },
+  {
+    image: ImgI,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle", "pi-circle-fill", "pi-circle-fill", "pi-circle"],
+    name: "v neck dress",
+    discount: "$98.67",
+    price: "$111.78",
+  },
+  {
+    image: ImgJ,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle"],
+    name: "fitted dress",
+    discount: "$49.06",
+    price: "$78.60",
+  },
+  {
+    image: ImgK,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle"],
+    name: "belted top",
+    discount: "$78.67",
+    price: "$120.99",
+  },
+];
+
+const parach = [
+  {
+    image: ImgD,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle", "pi-circle", "pi-circle-fill"],
+    name: "crop top",
+    discount: "$117",
+    price: "$189",
+  },
+  {
+    image: ImgE,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle"],
+    name: "belted dress",
+    discount: "$47.98",
+    price: "$79.76",
+  },
+  {
+    image: ImgF,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle"],
+    name: "sleevless top",
+    discount: "$207.99",
+    price: "$270.87",
+  },
+  {
+    image: ImgG,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    name: "waist dress",
+    circle: ["pi-circle", "pi-circle", "pi-circle-fill"],
+    discount: "$69.09",
+    price: "$89.78",
+  },
+  {
+    image: ImgH,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle", "pi-circle-fill"],
+    name: "trim dress",
+    discount: "$240.99",
+    price: "$309.87",
+  },
+  {
+    image: ImgI,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle", "pi-circle-fill", "pi-circle-fill", "pi-circle"],
+    name: "v neck dress",
+    discount: "$98.67",
+    price: "$111.78",
+  },
+  {
+    image: ImgJ,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle"],
+    name: "fitted dress",
+    discount: "$49.06",
+    price: "$78.60",
+  },
+  {
+    image: ImgK,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle"],
+    name: "belted top",
+    discount: "$78.67",
+    price: "$120.99",
+  },
+  {
+    image: ImgM,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle", "pi-circle", "pi-circle-fill"],
+    name: "crop top",
+    discount: "$117",
+    price: "$189",
+  },
+  {
+    image: ImgN,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle"],
+    name: "belted dress",
+    discount: "$47.98",
+    price: "$79.76",
+  },
+  {
+    image: ImgO,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle"],
+    name: "sleevless top",
+    discount: "$207.99",
+    price: "$270.87",
+  },
+  {
+    image: ImgP,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    name: "waist dress",
+    circle: ["pi-circle", "pi-circle", "pi-circle-fill"],
+    discount: "$69.09",
+    price: "$89.78",
+  },
+  {
+    image: ImgQ,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle", "pi-circle-fill"],
+    name: "trim dress",
+    discount: "$240.99",
+    price: "$309.87",
+  },
+  {
+    image: ImgR,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle", "pi-circle-fill", "pi-circle-fill", "pi-circle"],
+    name: "v neck dress",
+    discount: "$98.67",
+    price: "$111.78",
+  },
+  {
+    image: ImgS,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle"],
+    name: "fitted dress",
+    discount: "$49.06",
+    price: "$78.60",
+  },
+  {
+    image: ImgT,
+    icon: [
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+      "pi-star-fill",
+    ],
+    circle: ["pi-circle-fill", "pi-circle", "pi-circle"],
+    name: "belted top",
+    discount: "$78.67",
+    price: "$120.99",
+  },
+];
+
+export default function HomePage() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleImages = images.slice(currentIndex, currentIndex + 4);
+
+  const [myIndex, setMyIndex] = useState(0);
+  const edibleparach = parach.slice(myIndex, myIndex + 8);
+
+  const [activeIndex, setActiveIndex] = useState(Product.slice(0, 3));
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 4 ? 0 : prevIndex + 4
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [images.length]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setMyIndex((prevIndex) =>
+        prevIndex === parach.length - 8 ? 0 : prevIndex + 8
+      );
+    }, 3000);
+
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [parach.length]);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      index = (index + 1) % 6;
+      const newImages = [
+        Product[index % 6],
+        Product[(index + 1) % 6],
+        Product[(index + 2) % 6],
+      ];
+      setActiveIndex(newImages);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div>
+      <Header />
+      <Header2 />
+      <Hero />
+
+      <div className=" lg:flex gap-10 font-serif justify-center  sm:hidden overflow-hidden  sm:grid-cols-1   mt-20  w-full">
+        <div className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
+          <div className="cute text-center pr-10">
+            <p className="text-red-500 text-3xl font-semibold">10% OFF</p>
+            <h1 className="text-black text-7xl">MEN</h1>
+          </div>
+        </div>
+        <div className="picture flex justify-end items-center  bg-white  w-[35%]">
+          <div className="cute text-center pr-10">
+            <p className="text-red-500 text-3xl font-semibold">10% OFF</p>
+            <h1 className="text-black text-7xl">WOMEN</h1>
+          </div>
+        </div>
+      </div>
+      <div className="mt-15 m-3 text-center">
+        <p className="capitalize text-red-400 text-2xl font-medium">
+          special offer
+        </p>
+        <p className="text-5xl  font-bold text-gray-800 ">TOP COLLECTION</p>
+      </div>
+      <div className="flex  justify-center">
+        <hr className="w-26  bg-red-500 h-[2px] border-0" />
+      </div>
+      <div className="text-center mt-7 flex justify-center lg:w-[full]">
+        <p className="w-[40%] font-medium text-lg leading-8 text-gray-600">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industrys standard dummy text ever
+          since the 1500s,
+        </p>
+      </div>
+      <div className="w-full">
+        <div className="lg:grid lg:grid-cols-4 gap-10  md:grid md:grid-cols-3 sm:grid  sm:grid-cols-2  w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
+          {visibleImages.map((item, index) => (
+            // eslint-disable-next-line react/jsx-key
+            <div key={index} className=" ">
+              <img src={item.image} alt="" />
+              <div className="mt-10">
+                {item.icon.map((iconClass, iconIndex) => (
+                  <i
+                    key={iconIndex}
+                    className={`text-md mr-1 pi ${iconClass}`}
+                    style={{ color: iconIndex < 4 ? "gold" : "gray" }}
+                  ></i>
+                ))}
+              </div>
+              <p className="text-2xl text-gray-400 ">{item.name}</p>
+              <p className="text-3xl text-gray-900 font-semibold">
+                {item.price}{" "}
+                <span className="line-through text-lg text-gray-400">
+                  {item.discount}
+                </span>
+              </p>
+              <div className="">
+                {item.circle.map((circleClass, circleIndex) => (
+                  <i
+                    key={circleIndex}
+                    className={`text-lg mr-1 pi ${circleClass}`}
+                    style={{ color: circleIndex < 2 ? "brown" : "blue" }}
+                  ></i>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="special text-center  lg:w-full sm:w-auto  flex items-center px-20 ">
+        <div className="w-[35%] sm:text-3xl sm:leading-16  sm:text-center  lg:text-9xl font-bold    font- leading-32 h-[30vh] text-center m-2">
+          <p>
+            {" "}
+            <span className="text-[#ff4c3b] lg:text-9xl font-bold  sm:text-center   sm:leading-20 lg:leading-32 block">
+              2025
+            </span>{" "}
+            <span className=" uppercase text-6xl sm:leading-16  sm:text-center lg:leading-20 text-[#333333] font-bold block">
+              fashion trends
+            </span>{" "}
+            <span className="uppercase text-3xl text-[#777777] sm:text-center sm:leading-16  lg:leading-20 font-bold tracking-widest">
+              special offer
+            </span>
+          </p>
+        </div>
+      </div>
+      <div className="text-center font-sans-serif mt-20">
+        <p className="capitalize text-3xl text-red-500">exclusive products</p>
+        <h2 className="uppercase text-5xl py-2 font-medium">special produts</h2>
+        <div className="flex  justify-center">
+          <hr className="w-26  bg-red-500 h-[3px] border-0" />
+        </div>
+        <div className="flex justify-center mt-5 gap-10">
+          <p className="text-2xl tracking-wider text-red-500">NEW ARRIVALS</p>
+          <p className="text-2xl tracking-wider text-red-500">FEATURED</p>
+          <p className="text-2xl tracking-wider text-red-500">SPECIAL</p>
+        </div>
+      </div>
+      <div className="lg:grid lg:grid-cols-4 gap-10   md:grid md:grid-cols-3 sm:grid sm:grid-cols-2   w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
+        {edibleparach.map((item, index) => (
+          // eslint-disable-next-line react/jsx-key
+          <div key={index} className=" ">
+            <img src={item.image} alt="" />
+            <div className="mt-10">
+              {item.icon.map((iconClass, iconIndex) => (
+                <i
+                  key={iconIndex}
+                  className={`text-md mr-1 pi ${iconClass}`}
+                  style={{ color: iconIndex < 4 ? "gold" : "gray" }}
+                ></i>
+              ))}
+            </div>
+            <p className="text-2xl text-gray-400 ">{item.name}</p>
+            <p className="text-3xl text-gray-900 font-semibold">
+              {item.price}{" "}
+              <span className="line-through text-lg text-gray-400">
+                {item.discount}
+              </span>
+            </p>
+            <div className="">
+              {item.circle.map((circleClass, circleIndex) => (
+                <i
+                  key={circleIndex}
+                  className={`text-lg mr-1 pi ${circleClass}`}
+                  style={{ color: circleIndex < 2 ? "brown" : "blue" }}
+                ></i>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="lg:flex lg:justify-center lg:items-center sm:hidden sm:text-center sm:">
+        <div className="w-[90%]">
+          <hr className="  lg:block opacity-50 text-blue-600  sm:hidden" />
+          <div className=" lg:flex sm:grid sm:grid-cols-1 justify-between lg-w[100%]">
+            <div className="  lg:flex  gap-3 border-r-4 border-blue-100 h-40  mt-3  mb-3  items-center sm:w-auto lg:w-[30%]">
+              <div>
+                <i className="pi pi-truck text-[#ff4c3b]  text-7xl "></i>
+              </div>
+              <div>
+                <p className="uppercase font-bold text-2xl">free shipping</p>
+                <p className="capitalize text-gray-400 text-xl">
+                  free shipping world wide
+                </p>
+              </div>
+            </div>
+            <div className="lg:flex sm:hidden mt-3  gap-3  border-r-4 border-blue-100  mb-3 h-40  items-center sm:w-auto lg:w-[30%]">
+              <div>
+                <i className="pi pi-history text-[#ff4c3b]   text-7xl "></i>
+              </div>
+              <div>
+                <p className="uppercase font-bold text-2xl ">24 X 7 service</p>
+                <p className="capitalize text-gray-400 text-xl">
+                  online service for 24 x 7
+                </p>
+              </div>
+            </div>
+            <div className="flex  mt-3  mb-3  gap-3   items-center sm:w-auto  h-40 lg:w-[30%]">
+              <div className=" ">
+                <i className="pi pi-megaphone text-7xl text-[#ff4c3b]   "></i>
+              </div>
+              <div>
+                <p className="uppercase font-bold text-2xl">festival offer</p>
+                <p className="capitalize text-gray-400 text-xl ">
+                  new online special festival offer
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr className=" lg:block opacity-50 text-blue-600 sm:hidden" />
+        </div>
+      </div>
+      <div className=" py-20 text-center">
+        <p className="capitalize text-3xl text-red-500">our collection</p>
+        <p className="uppercase text-5xl py-2 font-medium">special product</p>
+        <div className="flex  py-3 justify-center">
+          <hr className="w-26  bg-red-500 h-[3px] border-0" />
+        </div>
+      </div>
+      <div>
+        <div className="lg:grid lg:grid-cols-3  sm:grid sm:grid-cols-1px-45 py-10  w- gap-5">
+          {activeIndex.map((image, index) => (
+            <div key={index} className=" w-[full] rounded-lg shadow-md">
+              <img src={image.image} alt="" />
+              <div className=" text-center font-serif py-5 ">
+                <p className="text-red-500 capitalize text-2xl">{image.date}</p>
+                <p className="uppercase text-2xl font-semibold text-gray-900">
+                  {image.pText}
+                </p>
+                <p className="uppercase text-2xl  font-semibold text-gray-900">
+                  {image.gText}
+                </p>
+                <div className="flex  py-2 justify-center">
+                  <hr className="w-26  bg-red-500 h-[3px] border-0" />
+                </div>
+                <p className="py-2 capitalize">{image.author}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="lg:grid lg:grid-cols-6 sm:grid sm:grid-cols-3 w-full ">
+        {arsenal.map((image, index) => (
+          // eslint-disable-next-line react/jsx-key
+          <div
+            key={index}
+            className="relative group  w[full] rounded-lg shadow-md"
+          >
+            <img src={image.image} alt="" />
+            <div className="icon absolute inset-0 flex items-center justify-center cursor-pointer bg-red-500 bg-opacity-50 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+              <i className={`text-7xl text-white pi ${image.icons}`}></i>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="lg:grid lg:grid-cols-5  sm:grid sm:grid-cols-2 py-30 w-full ">
+        {arsenal.map((image, index) => (
+          // eslint-disable-next-line react/jsx-key
+          <div key={index} className="  px-30  w[full]">
+            <img className=" " src={image.bax} alt="" />
+          </div>
+        ))}
+      </div>
+     <Footer/>
+      
+    </div>
+  );
+}

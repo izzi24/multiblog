@@ -1,0 +1,45 @@
+@import "tailwindcss";
+/* .opeh{
+    background-image: url('./images/1\ \(1\).jpg');
+    background-position: center;
+    background-size: cover;
+} */
+ .pictur{
+    background-image: url('./images/3.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+ }
+ .picture{
+    background-image: url('./images/4.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.cute{
+    /* height:80vh ;
+    width: 800px; */
+    border-top-right-radius:7px ;
+    border-bottom-right-radius: 7px;
+}
+.pictur:hover{
+    transform: scale(1.1);
+
+    transition: 0.7s;
+}
+.picture:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+}
+ 
+.special{
+    background-image: url('./images/special.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+}
