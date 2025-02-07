@@ -622,7 +622,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className="special text-center bg-center bg-fixed bg-no-repeat w-[100]  justify-center lg:justify-start md:justify-start lg:px-10 lg: h-screen relative flex items-center  ">
-        <div className=" lg:hidden text-center  sm:text-5xl sm:font-bold     sm:h-[30vh] ">
+        <div className=" lg:hidden text-center md:hidden  sm:text-5xl sm:font-bold     sm:h-[30vh] ">
           <p>
             {" "}
             <span className="text-[#ff4c3b] lg:text-9xl font-bold text-5xl  sm:text-center    lg:  block">
