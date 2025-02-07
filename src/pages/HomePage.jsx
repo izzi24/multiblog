@@ -792,11 +792,13 @@ export default function HomePage() {
               <p className="capitalize">{item.pText}</p>
             </div>
           ))}
-          <div className="flex justify-center pt-5">
+          {/* <div className="flex justify-center w-[100%] pt-5">
+            <hr className="opacity-30 w-[90%] " />
+          </div> */}
+        </div>
+        <div className="flex justify-center w-[100%] pt-5">
             <hr className="opacity-30 w-[90%] " />
           </div>
-        </div>
-       
       <div/>
       <div className="lg:flex   hidden  text-center px-20   py-3 pb-3 gap-20 justify-center  w-full">
           {pythons.map((item, index) => (
