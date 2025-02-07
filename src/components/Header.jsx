@@ -1,7 +1,7 @@
 export default function Header() {
   return (
-    <div className="bg-[#6c757d53] h-[8vh] flex sm:hidden md:hidden lg:flex justify-evenly items-center text-lg text-gray-400  ">
-      <div className="gap-10 flex">
+    <div className="bg-[#6c757d53] h-[8vh] flex sm:hidden md:hidden lg:flex justify-evenly items-center  text-lg text-gray-400  ">
+      <div className="gap-10 hidden sm:hidden md:hidden lg:block ">
         
           <p className="">Welcome to Our store Multikart</p>
           <p className="">Call Us: 123 - 456 - 7890</p>

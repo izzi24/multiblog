@@ -511,11 +511,11 @@ export default function HomePage() {
 
   return (
     <div>
-      <Header />
-      <Header2 />
-      <Hero />
+      {/* <Header /> */}
+      {/* <Header2 /> */}
+      {/* <Hero /> */}
 
-      <div className=" lg:flex gap-10 font-serif justify-center  sm:hidden overflow-hidden  sm:grid-cols-1   mt-20  w-full">
+      {/* <div className=" lg:flex gap-10 font-serif justify-center  sm:hidden overflow-hidden  sm:grid-cols-1   mt-20  w-full">
         <div className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
           <div className="cute text-center pr-10">
             <p className="text-red-500 text-3xl font-semibold">10% OFF</p>
@@ -528,7 +528,7 @@ export default function HomePage() {
             <h1 className="text-black text-7xl">WOMEN</h1>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="mt-15 m-3 text-center">
         <p className="capitalize text-red-400 text-2xl font-medium">
           special offer
@@ -602,7 +602,7 @@ export default function HomePage() {
         <div className="flex  justify-center">
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
-        <div className="flex justify-center mt-5 gap-10">
+        <div className="flex justify-center mt-5 gap-5">
           <p className="text-2xl tracking-wider text-red-500">NEW ARRIVALS</p>
           <p className="text-2xl tracking-wider text-red-500">FEATURED</p>
           <p className="text-2xl tracking-wider text-red-500">SPECIAL</p>
@@ -641,7 +641,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-      <div className="lg:flex lg:justify-center lg:items-center sm:hidden sm:text-center sm:">
+      {/* <div className="lg:flex lg:justify-center lg:items-center sm:hidden sm:text-center sm:">
         <div className="w-[90%]">
           <hr className="  lg:block opacity-50 text-blue-600  sm:hidden" />
           <div className=" lg:flex sm:grid sm:grid-cols-1 justify-between lg-w[100%]">
@@ -681,8 +681,8 @@ export default function HomePage() {
           </div>
           <hr className=" lg:block opacity-50 text-blue-600 sm:hidden" />
         </div>
-      </div>
-      <div className=" py-20 text-center">
+      </div> */}
+      <div className=" text-center">
         <p className="capitalize text-3xl text-red-500">our collection</p>
         <p className="uppercase text-5xl py-2 font-medium">special product</p>
         <div className="flex  py-3 justify-center">
@@ -733,7 +733,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-     <Footer/>
+     {/* <Footer/> */}
       
     </div>
   );

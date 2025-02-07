@@ -183,7 +183,7 @@ export default function Header2() {
           <img src={ImgA} alt="" />
         </div>
       </div>
-      <ul className="uppercase lg:grid  sm:hidden md:hidden grid-cols-6 gap-10">
+      <ul className="uppercase lg:grid  sm:opacity-0 md:opacity-0 lg:grid-cols-6 gap-10">
         {menuArray.map((item, index) => (
           <div
             key={index}
@@ -211,7 +211,7 @@ export default function Header2() {
           </div>
         ))}
       </ul>
-      <div className="flex sm:hidden md:hidden text-gray-600 gap-10">
+      <div className="flex sm:hidden md:hidden lg:block text-gray-600 gap-10">
         <div>
           <i className="text-2xl cursor-pointer pi pi-search"></i>
         </div>
