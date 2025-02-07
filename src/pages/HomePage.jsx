@@ -637,7 +637,7 @@ export default function HomePage() {
               special offer
             </span>
         </div>
-        <div className="hidden lg:block  text-center  lg:text-9xl lg:font-bold     lg:h-[30vh] ">
+        <div className="hidden lg:block md:block  text-center  lg:text-9xl lg:font-bold     lg:h-[30vh] ">
           <p className="">
             {" "}
             <span className="text-[#ff4c3b] lg:text-9xl font-bold text-4xl  sm:text-center    lg:  block">
