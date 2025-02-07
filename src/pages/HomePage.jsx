@@ -42,6 +42,23 @@ import ImgTo from "../images/bax3.png";
 import ImgTp from "../images/bax4.png";
 import ImgTq from "../images/bax5.png";
 
+const pythons = [
+  {
+    icon: "pi-truck",
+    hText: "FREE SHIPPING",
+    pText: "Free shipping world wide",
+  },
+  {
+    icon: "pi-history",
+    hText: "24 x 7 service",
+    pText: "online service for 24 X 7",
+  },
+  {
+    icon: "pi-megaphone",
+    hText: "festival offer",
+    pText: "new online special festival offer",
+  },
+];
 const arsenal = [
   {
     image: ImgTg,
@@ -574,7 +591,9 @@ export default function HomePage() {
         <p className="capitalize text-red-400 text-xl  lg:text-3xl md:text-2xl font-light lg:font-medium">
           special offer
         </p>
-        <p className="text-xl lg:text-5xl md:text-3xl  font-bold text-gray-800 ">TOP COLLECTION</p>
+        <p className="text-xl lg:text-5xl md:text-3xl  font-bold text-gray-800 ">
+          TOP COLLECTION
+        </p>
       </div>
       <div className="flex  justify-center">
         <hr className="w-26  bg-red-500 h-[2px] border-0" />
@@ -631,13 +650,12 @@ export default function HomePage() {
             <span className="   uppercase text-2xl lg:text-6xl tracking-widest  text-center  text-[#333333] font-bold block">
               fashion trends
             </span>{" "}
-          
           </p>
           <span className="uppercase lg:text-3xl text-[#777777] text-center text-xl   font-semibold tracking-widest">
-              special offer
-            </span>
+            special offer
+          </span>
         </div>
-        <div className="hidden lg:block  text-center  lg:text-9xl lg:font-bold     lg:h-[30vh] ">
+        <div className="hidden lg:block  text-center  lg:text-9xl md:hidden lg:font-bold     lg:h-[30vh] ">
           <p className="">
             {" "}
             <span className="text-[#ff4c3b] lg:text-9xl font-bold text-4xl  sm:text-center      block">
@@ -646,11 +664,10 @@ export default function HomePage() {
             <span className="   uppercase text-xl lg:text-6xl tracking-widest  text-center mt-0  text-[#333333] font-bold block">
               fashion trends
             </span>{" "}
-           
           </p>
           <p className="uppercase lg:text-3xl text-[#777777] text-center text-xl mt-3   font-semibold tracking-widest">
-              special offer
-            </p>
+            special offer
+          </p>
         </div>
         <div className="hidden lg:hidden md:block  text-center  md:text-6xl md:font-bold     md:h-[30vh] ">
           <p className="">
@@ -661,11 +678,10 @@ export default function HomePage() {
             <span className="   uppercase text-xl lg:text-6xl tracking-widest  text-center mt-0  text-[#333333] font-bold block">
               fashion trends
             </span>{" "}
-           
           </p>
           <p className="uppercase lg:text-3xl text-[#777777] text-center text-xl mt-3   font-semibold tracking-widest">
-              special offer
-            </p>
+            special offer
+          </p>
         </div>
       </div>
       <div className="text-center font-sans-serif w-full mt-20 px-2">
@@ -723,10 +739,10 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-      {/* <div className="lg:flex lg:justify-center lg:items-center sm:hidden sm:text-center sm:">
-        <div className="w-[90%]">
-          <hr className="  lg:block opacity-50 text-blue-600  sm:hidden" />
-          <div className=" lg:flex sm:grid sm:grid-cols-1 justify-between lg-w[100%]">
+      {/* <div className="">
+        <div className="w-[90%] lg:flex lg:justify-center lg:items-center hidden  md:hidden text-center  ">
+          <hr className="  lg:block opacity-50 text-blue-600  " />
+          <div className=" lg:flex sm:grid  justify-between lg-w[100%]">
             <div className="  lg:flex  gap-3 border-r-4 border-blue-100 h-40  mt-3  mb-3  items-center sm:w-auto lg:w-[30%]">
               <div>
                 <i className="pi pi-truck text-[#ff4c3b]  text-7xl "></i>
@@ -763,10 +779,47 @@ export default function HomePage() {
           </div>
           <hr className=" lg:block opacity-50 text-blue-600 sm:hidden" />
         </div>
+        
       </div> */}
+      <div className="lg:hidden sm:block text-center  justify-around px-20 py-3 pb-3 gap-10  w-full">
+          {pythons.map((item, index) => (
+            // eslint-disable-next-line react/jsx-key
+            <div key={index} className="py-3">
+              <i
+                className={`text-md mr-1 text-red-500 text-6xl font-light py-2 pi ${item.icon}`}
+              ></i>
+              <h1 className="font-semibold text-xl uppercase">{item.hText}</h1>
+              <p className="capitalize">{item.pText}</p>
+            </div>
+          ))}
+          <div className="flex justify-center pt-5">
+            <hr className="opacity-30 w-[90%] " />
+          </div>
+        </div>
+       
+      <div/>
+      <div className="lg:flex   hidden  text-center px-20   py-3 pb-3 gap-20 justify-center  w-full">
+          {pythons.map((item, index) => (
+            // eslint-disable-next-line react/jsx-key
+            <div key={index} className="py-3">
+              <i
+                className={`text-md mr-1 text-red-500 text-6xl font-light py-2 pi ${item.icon}`}
+              ></i>
+              <h1 className="font-semibold text-xl uppercase">{item.hText}</h1>
+              <p className="capitalize">{item.pText}</p>
+            </div>
+          ))}
+          <div className="flex justify-center pt-5">
+            <hr className="opacity-30 w-[90%] " />
+          </div>
+        </div>
+       
+      <div/>
       <div className=" text-center">
         <p className="capitalize text-xl lg:3xl text-red-500">our collection</p>
-        <p className="uppercase lg:text-5xl  text-2xl py-2 font-medium">special product</p>
+        <p className="uppercase lg:text-5xl  text-2xl py-2 font-medium">
+          special product
+        </p>
         <div className="flex  py-3 justify-center">
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
@@ -830,11 +883,7 @@ export default function HomePage() {
         >
           {arsenal.map((item, index) => (
             <SwiperSlide key={index}>
-              <img
-                src={item.image}
-                alt=""
-                className="w-full "
-              />
+              <img src={item.image} alt="" className="w-full " />
             </SwiperSlide>
           ))}
         </Swiper>
