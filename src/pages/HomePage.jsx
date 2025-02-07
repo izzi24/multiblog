@@ -596,16 +596,16 @@ export default function HomePage() {
           </p>
         </div>
       </div>
-      <div className="text-center font-sans-serif mt-20">
-        <p className="capitalize text-3xl text-red-500">exclusive products</p>
-        <h2 className="uppercase text-5xl py-2 font-medium">special produts</h2>
+      <div className="text-center font-sans-serif w-full mt-20 px-2">
+        <p className="capitalize lg:text-3xl   text-red-500">exclusive products</p>
+        <h2 className="uppercase text-5xl sm:2xl md:3xl py-2 font-medium">special produts</h2>
         <div className="flex  justify-center">
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
-        <div className="flex justify-center mt-5 gap-5">
-          <p className="text-2xl tracking-wider text-red-500">NEW ARRIVALS</p>
-          <p className="text-2xl tracking-wider text-red-500">FEATURED</p>
-          <p className="text-2xl tracking-wider text-red-500">SPECIAL</p>
+        <div className="grid grid-cols-3 justify-center mt-5 gap-5">
+          <p className="lg:text-3xl sm:text-xl  md:text-2xl  tracking-wider text-red-500">NEW ARRIVALS</p>
+          <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">FEATURED</p>
+          <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">SPECIAL</p>
         </div>
       </div>
       <div className="lg:grid lg:grid-cols-4 gap-10   md:grid md:grid-cols-3 sm:grid sm:grid-cols-2   w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
