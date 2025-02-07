@@ -1,8 +1,12 @@
 import { useEffect, useState } from "react";
-import Header from "../components/Header";
-import Header2 from "../components/Header2";
-import Hero from "../components/Hero";
-import Footer from "../components/Footer";
+// import Header from "../components/Header";
+// import Header2 from "../components/Header2";
+// import Hero from "../components/Hero";
+// import Footer from "../components/Footer";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
 
 import ImgD from "../images/5.jpg";
 import ImgE from "../images/6.jpg";
@@ -38,7 +42,6 @@ import ImgTo from "../images/bax3.png";
 import ImgTp from "../images/bax4.png";
 import ImgTq from "../images/bax5.png";
 
-
 const arsenal = [
   {
     image: ImgTg,
@@ -70,6 +73,37 @@ const arsenal = [
     icons: "pi-instagram",
   },
 ];
+// const bucketList = [
+//   {
+//     image: ImgTg,
+//     // bax: ImgTm,
+//     // icons: "pi-instagram",
+//   },
+//   {
+//     image: ImgTh,
+//     // bax: ImgTn,
+//     // icons: "pi-instagram",
+//   },
+//   {
+//     image: ImgTi,
+//     // bax: ImgTo,
+//     // icons: "pi-instagram",
+//   },
+//   {
+//     image: ImgTj,
+//     // bax: ImgTp,
+//     // icons: "pi-instagram",
+//   },
+//   {
+//     image: ImgTk,
+//     // bax: ImgTq,
+//     // icons: "pi-instagram",
+//   },
+//   {
+//     image: ImgTl,
+//     // icons: "pi-instagram",
+//   },
+// ];
 
 const Product = [
   {
@@ -494,6 +528,13 @@ export default function HomePage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [parach.length]);
 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setStartIndex((prevIndex) => (prevIndex + 1) % 4);
+  //   },3000);
+  //  return () => clearInterval(interval);
+  // }, []);
+
   useEffect(() => {
     let index = 0;
     const interval = setInterval(() => {
@@ -546,7 +587,7 @@ export default function HomePage() {
         </p>
       </div>
       <div className="w-full">
-        <div className="lg:grid lg:grid-cols-4 gap-5  md:grid md:grid-cols-3 sm:grid  sm:grid-cols-2  w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
+        <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-5  md:grid md:grid-cols-3 md:gap-5 sm:grid sm:grid-cols-2  w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
           {visibleImages.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
@@ -597,18 +638,28 @@ export default function HomePage() {
         </div>
       </div>
       <div className="text-center font-sans-serif w-full mt-20 px-2">
-        <p className="capitalize lg:text-3xl   text-red-500">exclusive products</p>
-        <h2 className="uppercase text-5xl sm:2xl md:3xl py-2 font-medium">special produts</h2>
+        <p className="capitalize lg:text-3xl   text-red-500">
+          exclusive products
+        </p>
+        <h2 className="uppercase text-5xl sm:2xl md:3xl py-2 font-medium">
+          special produts
+        </h2>
         <div className="flex  justify-center">
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
         <div className="grid grid-cols-3 justify-center mt-5 gap-5">
-          <p className="lg:text-3xl sm:text-xl  md:text-2xl  tracking-wider text-red-500">NEW ARRIVALS</p>
-          <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">FEATURED</p>
-          <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">SPECIAL</p>
+          <p className="lg:text-3xl sm:text-xl  md:text-2xl  tracking-wider text-red-500">
+            NEW ARRIVALS
+          </p>
+          <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">
+            FEATURED
+          </p>
+          <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">
+            SPECIAL
+          </p>
         </div>
       </div>
-      <div className="lg:grid lg:grid-cols-4 gap-10   md:grid md:grid-cols-3 sm:grid sm:grid-cols-2   w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
+      <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-10 md:grid md:grid-cols-3 md:gap-10 sm:grid sm:grid-cols-2 sm:gap-10   w-full px-20  py-20 transition-transform duration-500 ease-in-out">
         {edibleparach.map((item, index) => (
           // eslint-disable-next-line react/jsx-key
           <div key={index} className=" ">
@@ -690,7 +741,7 @@ export default function HomePage() {
         </div>
       </div>
       <div>
-        <div className="lg:grid lg:grid-cols-3  sm:grid sm:grid-cols-1px-45 py-10  w- gap-5">
+        <div className="lg:grid lg:grid-cols-3  sm:grid sm:grid-cols-1px-45 py-10  w-full gap-5">
           {activeIndex.map((image, index) => (
             <div key={index} className=" w-[full] rounded-lg shadow-md">
               <img src={image.image} alt="" />
@@ -711,12 +762,12 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <div className="lg:grid lg:grid-cols-6 sm:grid sm:grid-cols-3 w-full ">
+      <div className="hidden lg:grid lg:grid-cols-6  w-full ">
         {arsenal.map((image, index) => (
           // eslint-disable-next-line react/jsx-key
           <div
             key={index}
-            className="relative group  w[full] rounded-lg shadow-md"
+            className="relative group  w-full rounded-lg shadow-md"
           >
             <img src={image.image} alt="" />
             <div className="icon absolute inset-0 flex items-center justify-center cursor-pointer bg-red-500 bg-opacity-50 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
@@ -725,6 +776,53 @@ export default function HomePage() {
           </div>
         ))}
       </div>
+      <div className="hidden md:grid md:grid-cols-4 lg:hidden  w-full ">
+        {arsenal.map((image, index) => (
+          // eslint-disable-next-line react/jsx-key
+          <div
+            key={index}
+            className="relative group  w-full rounded-lg shadow-md"
+          >
+            <img src={image.image} alt="" />
+            <div className="icon absolute inset-0 flex items-center justify-center cursor-pointer bg-red-500 bg-opacity-50 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+              <i className={`text-7xl text-white pi ${image.icons}`}></i>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="md:hidden">
+        <Swiper
+          slidesPerView={3}
+          loop
+          autoplay={{ delay: 3000 }}
+          modules={[Autoplay]}
+        >
+          {arsenal.map((item, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={item.image}
+                alt=""
+                className="w-full "
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      {/* <div className=" grid grid-cols-3 gap-4 sm:grid  md:hidden ">
+        {arsenal.concat(arsenal).slice(startIndex,setStartIndex + 3).map((image, index) => (
+          <div
+            key={index}
+            className="relative group  w-full transition-opacity duration-500  rounded-lg shadow-md "
+          >
+            <img src={image.image} alt="" />
+            <div className="icon absolute inset-0 flex items-center justify-center cursor-pointer bg-red-500 bg-opacity-50 opacity-0 group-hover:opacity-70 transition-opacity duration-300">
+              <i className={`text-7xl text-white pi ${images.icons}`}></i>
+            </div>
+          </div>
+          
+        ))}
+      </div> */}
+
       <div className="lg:grid lg:grid-cols-5  sm:grid sm:grid-cols-2 py-30 w-full ">
         {arsenal.map((image, index) => (
           // eslint-disable-next-line react/jsx-key
@@ -733,8 +831,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-     {/* <Footer/> */}
-      
+      {/* <Footer/> */}
     </div>
   );
 }
