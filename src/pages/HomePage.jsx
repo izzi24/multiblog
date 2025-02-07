@@ -539,14 +539,14 @@ export default function HomePage() {
         <hr className="w-26  bg-red-500 h-[2px] border-0" />
       </div>
       <div className="text-center mt-7 flex justify-center lg:w-[full]">
-        <p className="w-[40%] font-medium text-lg leading-8 text-gray-600">
+        <p className="w-[full] font-medium text-lg leading-8 md:text-lg sm:md text-gray-600">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industrys standard dummy text ever
           since the 1500s,
         </p>
       </div>
       <div className="w-full">
-        <div className="lg:grid lg:grid-cols-4 gap-10  md:grid md:grid-cols-3 sm:grid  sm:grid-cols-2  w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
+        <div className="lg:grid lg:grid-cols-4 gap-5  md:grid md:grid-cols-3 sm:grid  sm:grid-cols-2  w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
           {visibleImages.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
@@ -580,7 +580,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <div className="special text-center  lg:w-full sm:w-auto  flex items-center px-20 ">
+      <div className="special text-center  lg:w-full  flex items-center px-20 ">
         <div className="w-[35%] sm:text-3xl sm:leading-16  sm:text-center  lg:text-9xl font-bold    font- leading-32 h-[30vh] text-center m-2">
           <p>
             {" "}
