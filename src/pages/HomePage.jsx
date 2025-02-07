@@ -587,7 +587,7 @@ export default function HomePage() {
         </p>
       </div>
       <div className="w-full">
-        <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-5  md:grid md:grid-cols-3 md:gap-5 sm:grid sm:grid-cols-2  w-[full] px-20  py-20 transition-transform duration-500 ease-in-out">
+        <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-4  md:grid md:grid-cols-2  sm:grid sm:grid-cols-2  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
           {visibleImages.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
@@ -648,7 +648,7 @@ export default function HomePage() {
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
         <div className="grid grid-cols-3 justify-center mt-5 gap-5">
-          <p className="lg:text-3xl sm:text-xl  md:text-2xl  tracking-wider text-red-500">
+          <p className="lg:text-3xl sm:text-xl w-[120px]  md:text-2xl   text-red-500">
             NEW ARRIVALS
           </p>
           <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">
@@ -659,7 +659,7 @@ export default function HomePage() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-10 md:grid md:grid-cols-3 md:gap-10 sm:grid sm:grid-cols-2 sm:gap-10   w-full px-20  py-20 transition-transform duration-500 ease-in-out">
+      <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-4 md:grid md:grid-cols-2 md:gap-10 sm:grid sm:grid-cols-2    w-full px-10  py-20 transition-transform duration-500 ease-in-out">
         {edibleparach.map((item, index) => (
           // eslint-disable-next-line react/jsx-key
           <div key={index} className=" ">
