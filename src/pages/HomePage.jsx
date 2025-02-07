@@ -621,7 +621,7 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <div className="special text-center bg-center bg-fixed bg-no-repeat w-[100]  justify-center lg:justify-start lg:px-10 lg: h-screen relative flex items-center  ">
+      <div className="special text-center bg-center bg-fixed bg-no-repeat w-[100]  justify-center lg:justify-start md:justify-start lg:px-10 lg: h-screen relative flex items-center  ">
         <div className=" lg:hidden text-center  sm:text-5xl sm:font-bold     sm:h-[30vh] ">
           <p>
             {" "}
@@ -637,10 +637,25 @@ export default function HomePage() {
               special offer
             </span>
         </div>
-        <div className="hidden lg:block md:block  text-center  lg:text-9xl lg:font-bold     lg:h-[30vh] ">
+        <div className="hidden lg:block  text-center  lg:text-9xl lg:font-bold     lg:h-[30vh] ">
           <p className="">
             {" "}
-            <span className="text-[#ff4c3b] lg:text-9xl font-bold text-4xl  sm:text-center    lg:  block">
+            <span className="text-[#ff4c3b] lg:text-9xl font-bold text-4xl  sm:text-center      block">
+              2025
+            </span>{" "}
+            <span className="   uppercase text-xl lg:text-6xl tracking-widest  text-center mt-0  text-[#333333] font-bold block">
+              fashion trends
+            </span>{" "}
+           
+          </p>
+          <p className="uppercase lg:text-3xl text-[#777777] text-center text-xl mt-3   font-semibold tracking-widest">
+              special offer
+            </p>
+        </div>
+        <div className="hidden lg:hidden md:block  text-center  md:text-6xl md:font-bold     md:h-[30vh] ">
+          <p className="">
+            {" "}
+            <span className="text-[#ff4c3b] lg:text-9xl font-bold text-4xl  sm:text-center      block">
               2025
             </span>{" "}
             <span className="   uppercase text-xl lg:text-6xl tracking-widest  text-center mt-0  text-[#333333] font-bold block">
