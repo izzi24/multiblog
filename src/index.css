@@ -39,7 +39,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    /* background-position: cen ; */
     overflow: hidden;
-    height: 100vh;
-    /* width: 100%; */
+    height: 70vh;
+    width: 100%;
 }

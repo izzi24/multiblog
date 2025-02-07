@@ -571,16 +571,16 @@ export default function HomePage() {
         </div>
       </div> */}
       <div className="mt-15 m-3 text-center">
-        <p className="capitalize text-red-400 text-2xl font-medium">
+        <p className="capitalize text-red-400 text-xl  lg:text-3xl md:text-2xl font-light lg:font-medium">
           special offer
         </p>
-        <p className="text-5xl  font-bold text-gray-800 ">TOP COLLECTION</p>
+        <p className="text-xl lg:text-5xl md:text-3xl  font-bold text-gray-800 ">TOP COLLECTION</p>
       </div>
       <div className="flex  justify-center">
         <hr className="w-26  bg-red-500 h-[2px] border-0" />
       </div>
       <div className="text-center mt-7 flex justify-center lg:w-[full]">
-        <p className="w-[full] font-medium text-lg leading-8 md:text-lg sm:md text-gray-600">
+        <p className="w-[full] lg:font-medium font-normal text-lg leading-8 md:text-lg sm:md text-gray-500">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industrys standard dummy text ever
           since the 1500s,
@@ -621,40 +621,56 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <div className="special text-center  lg:w-full  flex items-center px-20 ">
-        <div className="w-[35%] sm:text-3xl sm:leading-16  sm:text-center  lg:text-9xl font-bold    font- leading-32 h-[30vh] text-center m-2">
+      <div className="special text-center bg-center bg-fixed bg-no-repeat w-[100]  justify-center lg:justify-start lg:px-10 lg: h-screen relative flex items-center  ">
+        <div className=" lg:hidden text-center  sm:text-5xl sm:font-bold     sm:h-[30vh] ">
           <p>
             {" "}
-            <span className="text-[#ff4c3b] lg:text-9xl font-bold  sm:text-center   sm:leading-20 lg:leading-32 block">
+            <span className="text-[#ff4c3b] lg:text-9xl font-bold text-5xl  sm:text-center    lg:  block">
               2025
             </span>{" "}
-            <span className=" uppercase text-6xl sm:leading-16  sm:text-center lg:leading-20 text-[#333333] font-bold block">
+            <span className="   uppercase text-2xl lg:text-6xl tracking-widest  text-center  text-[#333333] font-bold block">
               fashion trends
             </span>{" "}
-            <span className="uppercase text-3xl text-[#777777] sm:text-center sm:leading-16  lg:leading-20 font-bold tracking-widest">
+          
+          </p>
+          <span className="uppercase lg:text-3xl text-[#777777] text-center text-xl   font-semibold tracking-widest">
               special offer
             </span>
+        </div>
+        <div className="hidden lg:block  text-center  lg:text-9xl lg:font-bold     lg:h-[30vh] ">
+          <p className="">
+            {" "}
+            <span className="text-[#ff4c3b] lg:text-9xl font-bold text-4xl  sm:text-center    lg:  block">
+              2025
+            </span>{" "}
+            <span className="   uppercase text-xl lg:text-6xl tracking-widest  text-center mt-0  text-[#333333] font-bold block">
+              fashion trends
+            </span>{" "}
+           
           </p>
+          <p className="uppercase lg:text-3xl text-[#777777] text-center text-xl mt-3   font-semibold tracking-widest">
+              special offer
+            </p>
         </div>
       </div>
       <div className="text-center font-sans-serif w-full mt-20 px-2">
         <p className="capitalize lg:text-3xl   text-red-500">
           exclusive products
         </p>
-        <h2 className="uppercase text-5xl sm:2xl md:3xl py-2 font-medium">
+        <h2 className="uppercase text-xl text-center  lg:5xl md:3xl py-2 font-medium">
           special produts
         </h2>
         <div className="flex  justify-center">
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
-        <div className="grid grid-cols-3 justify-center mt-5 gap-5">
-          <p className="lg:text-3xl sm:text-xl w-[120px]  md:text-2xl   text-red-500">
+        <div className="flex flex-cols-3 justify-center items-center gap-10 w-full mt-5  ">
+          <p className="lg:text-2xl sm:text-xl   md:text-2xl   text-red-500">
             NEW ARRIVALS
           </p>
-          <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">
+          <p className="lg:text-2xl sm:text-xl md:text-2xl tracking-wider text-red-500">
             FEATURED
           </p>
-          <p className="lg:text-3xl sm:text-xl md:text-2xl tracking-wider text-red-500">
+          <p className="lg:text-2xl sm:text-xl md:text-2xl tracking-wider text-red-500">
             SPECIAL
           </p>
         </div>
@@ -734,8 +750,8 @@ export default function HomePage() {
         </div>
       </div> */}
       <div className=" text-center">
-        <p className="capitalize text-3xl text-red-500">our collection</p>
-        <p className="uppercase text-5xl py-2 font-medium">special product</p>
+        <p className="capitalize text-xl lg:3xl text-red-500">our collection</p>
+        <p className="uppercase lg:text-5xl  text-2xl py-2 font-medium">special product</p>
         <div className="flex  py-3 justify-center">
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
