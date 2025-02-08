@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 // import Header from "../components/Header";
 // import Header2 from "../components/Header2";
-// import Hero from "../components/Hero";
+import Hero from "../components/Hero";
 // import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -522,6 +522,7 @@ export default function HomePage() {
   const edibleparach = parach.slice(myIndex, myIndex + 8);
 
   const [activeIndex, setActiveIndex] = useState(Product.slice(0, 3));
+  // const [fumanIndex, setFumanIndex] = useState(Product.slice(0, 1));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -562,16 +563,39 @@ export default function HomePage() {
         Product[(index + 2) % 6],
       ];
       setActiveIndex(newImages);
+      
     }, 3000);
 
     return () => clearInterval(interval);
   }, []);
 
+  // useEffect(() => {
+  //   const updateGridCols = () => {
+  //     if (window.innerWidth >= 1024) setCols(3); // lg: Show 3 images
+  //     else if (window.innerWidth >= 768) setCols(2); // md: Show 2 images
+  //     else setCols(1); // sm: Show 1 image
+  //   };
+
+  //   updateGridCols();
+  //   window.addEventListener("resize", updateGridCols);
+  //   return () => window.removeEventListener("resize", updateGridCols);
+  // },[]);
+  
+ 
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActive((prevIndex) => (prevIndex + 1) % Product.length);
+  //     setActiveIndex(Product.slice(active, active + 1));
+  //   }, 3000); // Change image every 3 seconds
+
+  //   return () => clearInterval(interval);
+  // }, [active]);
+
   return (
     <div>
       {/* <Header /> */}
       {/* <Header2 /> */}
-      {/* <Hero /> */}
+      <Hero />
 
       {/* <div className=" lg:flex gap-10 font-serif justify-center  sm:hidden overflow-hidden  sm:grid-cols-1   mt-20  w-full">
         <div className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
@@ -781,7 +805,7 @@ export default function HomePage() {
         </div>
         
       </div> */}
-      <div className="lg:hidden sm:block text-center  justify-around px-20 py-3 pb-3 gap-10  w-full">
+      <div className="lg:hidden sm:block text-center md:hidden justify-around px-20 py-3 pb-3 gap-10  w-full">
           {pythons.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className="py-3">
@@ -800,14 +824,15 @@ export default function HomePage() {
             <hr className="opacity-30 w-[90%] " />
           </div>
       <div/>
-      <div className="lg:flex   hidden  text-center px-20   py-3 pb-3 gap-20 justify-center  w-full">
+      <div className="lg:flex   hidden md:flex text-center px-20  py-3 pb-3 gap-20 justify-center  w-full">
+        
           {pythons.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
-            <div key={index} className="py-3">
+            <div key={index} className="py-3  text-center  ">
               <i
-                className={`text-md mr-1 text-red-500 text-6xl font-light py-2 pi ${item.icon}`}
+                className={`text-md mr-1 text-red-500 text-6xl  font-light py-2 pi ${item.icon}`}
               ></i>
-              <h1 className="font-semibold text-xl uppercase">{item.hText}</h1>
+              <h1 className="font-semibold text-xl    uppercase">{item.hText}</h1>
               <p className="capitalize">{item.pText}</p>
             </div>
           ))}
@@ -815,9 +840,11 @@ export default function HomePage() {
             <hr className="opacity-30 w-[90%] " />
           </div>
         </div>
-       
+        <div className="lg:flex md:flex justify-center hidden pt-3">
+            <hr className="opacity-30 w-[90%] " />
+          </div>
       <div/>
-      <div className=" text-center">
+      <div className=" text-center pt-5">
         <p className="capitalize text-xl lg:3xl text-red-500">our collection</p>
         <p className="uppercase lg:text-5xl  text-2xl py-2 font-medium">
           special product
@@ -826,8 +853,7 @@ export default function HomePage() {
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
       </div>
-      <div>
-        <div className="lg:grid lg:grid-cols-3  sm:grid sm:grid-cols-1px-45 py-10  w-full gap-5">
+      <div className="grid grid-cols-1  lg:grid-cols-3 md:grid-cols-2 py-10  w-full gap-5 px-4">
           {activeIndex.map((image, index) => (
             <div key={index} className=" w-[full] rounded-lg shadow-md">
               <img src={image.image} alt="" />
@@ -846,8 +872,7 @@ export default function HomePage() {
               </div>
             </div>
           ))}
-        </div>
-      </div>
+       </div>
       <div className="hidden lg:grid lg:grid-cols-6  w-full ">
         {arsenal.map((image, index) => (
           // eslint-disable-next-line react/jsx-key
@@ -862,7 +887,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-      <div className="hidden md:grid md:grid-cols-4 lg:hidden  w-full ">
+      <div className="hidden md:grid md:grid-cols-6 lg:hidden  w-full ">
         {arsenal.map((image, index) => (
           // eslint-disable-next-line react/jsx-key
           <div
@@ -880,7 +905,7 @@ export default function HomePage() {
         <Swiper
           slidesPerView={3}
           loop
-          autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 3000 }}
           modules={[Autoplay]}
         >
           {arsenal.map((item, index) => (

@@ -37,12 +37,12 @@ export default function Hero() {
   return (
     <div className="lg:w-full sm:auto md:auto font-serif  capitalize ">
       <div
-        className=" bg-center  w-full h-[78vh] "
-        style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
+        className=" bg-center bg-cover bg-  w-full h-[78vh] "
+        style={{  backgroundImage: ` url(${slides[currentSlide].image})`,  }}
       >
        
         
-          <div className="lg:text-center lg:items-center sm:text-center lg:py-40 sm:py-10 sm:px-10 sm:ml-5   w-[50%]">
+          {/* <div className="lg:text-center lg:items-center sm:text-center lg:py-40 sm:py-10 sm:px-10 sm:ml-5   w-[50%]">
             <h1 className="text-gray-400  sm:text-4xl lg:text-3xl font-semibold py-3 tracking-widest">
               {slides[currentSlide].TextP}
             </h1>
@@ -52,7 +52,7 @@ export default function Hero() {
             <button className="bg-[black] text-[gold] mt-6 py-6 text-xl  font-semibold uppercase px-12">
               {slides[currentSlide].ShopT}
             </button>
-          </div>
+          </div> */}
         
         <div className="  absolute lg:bottom-80 sm:bottom-50  w-[100%] ">
           <div className=" flex justify-between lg:px-20 sm:px-2">
