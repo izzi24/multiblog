@@ -517,6 +517,8 @@ const parach = [
 export default function HomePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleImages = images.slice(currentIndex, currentIndex + 4);
+  const visibleImage = images.slice(currentIndex, currentIndex + 2);
+  const visibleIma = images.slice(currentIndex, currentIndex + 3);
 
   const [myIndex, setMyIndex] = useState(0);
   const edibleparach = parach.slice(myIndex, myIndex + 8);
@@ -630,8 +632,74 @@ export default function HomePage() {
         </p>
       </div>
       <div className="w-full">
-        <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-4  md:grid md:grid-cols-2  sm:grid sm:grid-cols-2  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
+        <div className=" hidden  lg:grid lg:grid-cols-4 gap-4  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
           {visibleImages.map((item, index) => (
+            // eslint-disable-next-line react/jsx-key
+            <div key={index} className=" ">
+              <img src={item.image} alt="" />
+              <div className="mt-10">
+                {item.icon.map((iconClass, iconIndex) => (
+                  <i
+                    key={iconIndex}
+                    className={`text-md mr-1 pi ${iconClass}`}
+                    style={{ color: iconIndex < 4 ? "gold" : "gray" }}
+                  ></i>
+                ))}
+              </div>
+              <p className="text-2xl text-gray-400 ">{item.name}</p>
+              <p className="text-3xl text-gray-900 font-semibold">
+                {item.price}{" "}
+                <span className="line-through text-lg text-gray-400">
+                  {item.discount}
+                </span>
+              </p>
+              <div className="">
+                {item.circle.map((circleClass, circleIndex) => (
+                  <i
+                    key={circleIndex}
+                    className={`text-lg mr-1 pi ${circleClass}`}
+                    style={{ color: circleIndex < 2 ? "brown" : "blue" }}
+                  ></i>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className=" lg:hidden sm:grid sm:grid-cols-2 gap-5 md:hidden  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
+          {visibleImage.map((item, index) => (
+            // eslint-disable-next-line react/jsx-key
+            <div key={index} className=" ">
+              <img src={item.image} alt="" />
+              <div className="mt-10">
+                {item.icon.map((iconClass, iconIndex) => (
+                  <i
+                    key={iconIndex}
+                    className={`text-md mr-1 pi ${iconClass}`}
+                    style={{ color: iconIndex < 4 ? "gold" : "gray" }}
+                  ></i>
+                ))}
+              </div>
+              <p className="text-2xl text-gray-400 ">{item.name}</p>
+              <p className="text-3xl text-gray-900 font-semibold">
+                {item.price}{" "}
+                <span className="line-through text-lg text-gray-400">
+                  {item.discount}
+                </span>
+              </p>
+              <div className="">
+                {item.circle.map((circleClass, circleIndex) => (
+                  <i
+                    key={circleIndex}
+                    className={`text-lg mr-1 pi ${circleClass}`}
+                    style={{ color: circleIndex < 2 ? "brown" : "blue" }}
+                  ></i>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className="lg:hidden hidden md:grid md:grid-cols-3 gap-5  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
+          {visibleIma.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
               <img src={item.image} alt="" />

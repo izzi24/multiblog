@@ -63,7 +63,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="lg:flex sm:flex flex-col hidden  w-[50%] h-[78vh] items-center justify-center ">
+        <div className="lg:flex md:flex flex-col hidden  w-[50%] h-[78vh] items-center justify-center ">
           <div className="text-center w-full">
             <h1 className=" text-[#777777] text-xl">
               {slides[currentSlide].TextP}
@@ -79,7 +79,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className=" hidden absolute lg:block md:block -translate-y-76  w-[100%] ">
+      {/* <div className=" hidden absolute lg:block md:block -translate-y-76  w-[100%] ">
         <div className="flex justify-between lg:px-20 sm:px-2">
           <i
             onClick={nextSlide}
@@ -90,7 +90,7 @@ export default function Hero() {
             className="pi pi-chevron-right p-2  bg-gray-200 rounded-full"
           ></i>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
