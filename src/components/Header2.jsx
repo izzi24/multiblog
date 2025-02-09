@@ -123,7 +123,7 @@ export default function Header2() {
   };
 
   return (
-    <div className="bg-white lg:flex justify-around  text-white   items-center h-[14vh]">
+    <div className="bg-white hidden lg:flex md:flex justify-around  text-white   items-center h-[14vh]">
       <div className="flex items-center gap-11">
         {isMenuOpen ? (
           <div className="absolute top-0 left-0  h-[100vh] bg-black  border-gray-200">
