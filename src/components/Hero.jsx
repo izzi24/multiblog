@@ -63,7 +63,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
-        <div className="lg:flex relative sm:flex flex-col hidden  w-[50%] h-[78vh] items-center justify-center ">
+        <div className="lg:flex sm:flex flex-col hidden  w-[50%] h-[78vh] items-center justify-center ">
           <div className="text-center w-full">
             <h1 className=" text-[#777777] text-xl">
               {slides[currentSlide].TextP}
