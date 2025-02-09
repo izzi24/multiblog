@@ -665,7 +665,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className=" lg:hidden sm:grid sm:grid-cols-2 gap-5 md:hidden  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
+        <div className=" hidden sm:grid sm:grid-cols-2 gap-5 md:hidden  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
           {visibleImage.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
