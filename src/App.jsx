@@ -1,10 +1,10 @@
 
 import './App.css'
 import HomePage from './pages/HomePage'
-import Login from './pages/Login'
+// import Login from './pages/Login'
 // import Header from './components/Header'
 // import Header2 from './components/Header2'
-import Hero from './components/Hero'
+// import Hero from './components/Hero'
 
 function App() {
  
@@ -13,7 +13,7 @@ function App() {
     <>
     {/* <Header/> */}
       {/* <Header2/> */}
-      <Hero/>
+      {/* <Hero/> */}
       <HomePage/>
       {/* <Login/> */}
     </>

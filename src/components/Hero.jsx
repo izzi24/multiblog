@@ -29,42 +29,66 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 3000); 
+    }, 3000);
 
-    return () => clearInterval(interval); 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slides.length]);
   return (
-    <div className="lg:w-full sm:auto md:auto font-serif  capitalize ">
+    <div className=" font-serif  capitalize ">
       <div
-        className=" bg-center bg-cover bg-  w-full h-[78vh] "
-        style={{  backgroundImage: ` url(${slides[currentSlide].image})`,  }}
+        className=" bg-center bg-cover   w-full h-[78vh] "
+        style={{ backgroundImage: ` url(${slides[currentSlide].image})` }}
       >
-       
-        
-          {/* <div className="lg:text-center lg:items-center sm:text-center lg:py-40 sm:py-10 sm:px-10 sm:ml-5   w-[50%]">
-            <h1 className="text-gray-400  sm:text-4xl lg:text-3xl font-semibold py-3 tracking-widest">
+        <div className=" flex flex-col lg:hidden md:hidden relative w-full h-[78vh]  justify-center items-center">
+          <h1 className=" text-[#777777] text-lg">
+            {slides[currentSlide].TextP}
+          </h1>
+          <h1 className=" text-3xl tracking-wider font-extrabold">
+            {slides[currentSlide].TextY}
+          </h1>
+          <button className="mt-3 px-6 py-2 uppercase text-white text-lg   font-semibold bg-[#ff4c3b]">
+            {slides[currentSlide].ShopT}
+          </button>
+          <div className="  absolute  w-[100%] ">
+            <div className="flex justify-between lg:px-20 sm:px-2">
+              <i
+                onClick={nextSlide}
+                className="pi pi-chevron-left p-2  bg-gray-200  rounded-full"
+              ></i>
+              <i
+                onClick={prevSlide}
+                className="pi pi-chevron-right p-2  bg-gray-200 rounded-full"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div className="lg:flex relative sm:flex flex-col hidden  w-[50%] h-[78vh] items-center justify-center ">
+          <div className="text-center w-full">
+            <h1 className=" text-[#777777] text-xl">
               {slides[currentSlide].TextP}
             </h1>
-            <h1 className="text-7xl font-serif font-extrabold uppercase py-3 tracking-wider">
+            <h1 className=" text-5xl tracking-wider font-extrabold">
               {slides[currentSlide].TextY}
             </h1>
-            <button className="bg-[black] text-[gold] mt-6 py-6 text-xl  font-semibold uppercase px-12">
-              {slides[currentSlide].ShopT}
-            </button>
-          </div> */}
-        
-        <div className="  absolute lg:bottom-80 sm:bottom-50  w-[100%] ">
-          <div className=" flex justify-between lg:px-20 sm:px-2">
-            <i
-              onClick={nextSlide}
-              className="pi pi-chevron-left p-7   hover:bg-amber-500  rounded-full"
-            ></i>
-            <i
-              onClick={prevSlide}
-              className="pi pi-chevron-right p-7  hover:bg-amber-500 rounded-full"
-            ></i>
+            <div className="">
+              <button className="mt-3 px-6 py-2 uppercase text-white text-xl  font-semibold bg-[#ff4c3b]">
+                {slides[currentSlide].ShopT}
+              </button>
+            </div>
           </div>
+        </div>
+      </div>
+      <div className=" hidden absolute lg:block md:block -translate-y-76  w-[100%] ">
+        <div className="flex justify-between lg:px-20 sm:px-2">
+          <i
+            onClick={nextSlide}
+            className="pi pi-chevron-left p-2  bg-gray-200  rounded-full"
+          ></i>
+          <i
+            onClick={prevSlide}
+            className="pi pi-chevron-right p-2  bg-gray-200 rounded-full"
+          ></i>
         </div>
       </div>
     </div>
