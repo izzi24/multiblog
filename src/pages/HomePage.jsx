@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 // import Header from "../components/Header";
-// import Header2 from "../components/Header2";
+import Header2 from "../components/Header2";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -632,7 +632,7 @@ export default function HomePage() {
   return (
     <div>
       {/* <Header /> */}
-      {/* <Header2 /> */}
+      <Header2 />
       <Hero />
 
       <div className=" hidden lg:flex gap-10 font-serif justify-center  overflow-hidden  md:flex   mt-20  w-full">

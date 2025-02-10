@@ -34,7 +34,7 @@ const menuArray = [
       "Bags",
       "Flowers",
     ],
-    icons: " pi-sort-down-fill",
+    icons: "pi-chevron-down",
   },
   {
     name: "SHOP",
@@ -49,7 +49,7 @@ const menuArray = [
       "6 Grid",
       "List View",
     ],
-    icons: " pi-sort-down-fill",
+    icons: "pi-chevron-down",
   },
   {
     name: "PRODUTS",
@@ -64,7 +64,7 @@ const menuArray = [
       "Image Swatch",
       "Vertical Tab",
     ],
-    icons: " pi-sort-down-fill",
+    icons: "pi-chevron-down",
   },
   {
     name: "FEATURES",
@@ -79,7 +79,7 @@ const menuArray = [
       "Image Swatch",
       "Vertical Tab",
     ],
-    icons: " pi-sort-down-fill",
+    icons: "pi-chevron-down",
   },
   {
     name: "PAGES",
@@ -98,7 +98,7 @@ const menuArray = [
       "404",
       "coming-soon",
     ],
-    icons: "pi-sort-down-fill",
+    icons: "pi-chevron-down",
   },
   {
     name: "BLOGS",
@@ -108,12 +108,13 @@ const menuArray = [
       "No Sidebar",
       "Blog Detail",
     ],
-    icons: "pi-sort-down-fill",
+    icons: "pi-chevron-down",
   },
 ];
 // }
 export default function Header2() {
   const [isMenuOpen, setIsMenuOpen] = useState();
+  const [isTopeOpen, setIsTopeOpen] = useState();
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
@@ -121,9 +122,16 @@ export default function Header2() {
   const closeMenu = () => {
     setIsMenuOpen(false);
   };
+  const BlackMenu = () => {
+    setIsTopeOpen((prev) => !prev);
+  };
+  const RedMenu = () => {
+    setIsTopeOpen(false);
+  };
 
   return (
-    <div className="bg-white hidden lg:flex md:flex justify-around  text-white   items-center h-[14vh]">
+   <div>
+     <div className="bg-white  lg:flex md:hidden justify-around hidden text-white   items-center h-[14vh]">
       <div className="flex items-center gap-11">
         {isMenuOpen ? (
           <div className="absolute top-0 left-0  h-[100vh] bg-black  border-gray-200">
@@ -175,7 +183,7 @@ export default function Header2() {
           <div>
             <i
               onClick={toggleMenu}
-              className="text-4xl text-[gold] relative cursor-pointer pi pi-align-justify"
+              className="text-4xl text-[black] relative cursor-pointer pi pi-align-justify"
             ></i>
           </div>
         )}
@@ -183,11 +191,11 @@ export default function Header2() {
           <img src={ImgA} alt="" />
         </div>
       </div>
-      <ul className="uppercase lg:grid  sm:opacity-0 md:opacity-0 lg:grid-cols-6 gap-10">
+      <ul className="uppercase lg:grid lg:grid-cols-6 hidden w-[50%] gap-6">
         {menuArray.map((item, index) => (
           <div
             key={index}
-            className="flex cursor-pointer relative  group hover:text-blue-500  gap-2  text-lg text-gray-700 items-center"
+            className="flex cursor-pointer relative font-semibold group hover:text-blue-500  gap-2  text-lf text-gray-700 items-center"
           >
            
               <li className=" ">
@@ -211,17 +219,132 @@ export default function Header2() {
           </div>
         ))}
       </ul>
-      <div className="flex sm:hidden md:hidden lg:block text-gray-600 gap-10">
+      <div className="lg:flex  sm:hidden hidden  text-gray-600 gap-10">
         <div>
-          <i className="text-2xl cursor-pointer pi pi-search"></i>
+          <i className="text-xl cursor-pointer pi pi-search"></i>
         </div>
         <div>
-          <i className=" text-2xl cursor-pointer pi pi-cog"></i>
+          <i className=" text-xl cursor-pointer pi pi-cog"></i>
         </div>
         <div>
-          <i className=" text-2xl cursor-pointer pi pi-shopping-cart"></i>
+          <i className=" text-xl relative cursor-pointer pi pi-shopping-cart">
+            <p className="absolute text-md text-white py-1 p-1  bg-red-400 bottom-2 left-3 rounded-xl">0</p>
+          </i>
         </div>
       </div>
     </div>
+    {/* small screen */}
+    <div className="flex justify-between py-5 lg:hidden md: px-5 h-[12vh] items-center w-full">
+    {isMenuOpen ? (
+          <div className="absolute top-0 left-0  h-[auto] bg-white w-[80%]  border-gray-200">
+            <div onClick={closeMenu}  className="flex items-center ">
+              <div  className="cursor-pointer py-6 px-3 text-xl font-bold">
+                <i className="pi pi-chevron-left"></i>
+              </div>
+              <div className="cursor-pointer text-xl font-bold">
+                <p >BACK</p>
+              </div>
+            </div>
+            <hr className="opacity-30 w-full" />
+            <ul className="uppercase text-lg font-bold">
+              <div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>clothing</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>BAGS</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>FOOTWEAR</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>WATCHES</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>ACCESORIES</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>HOUSE OF DESIGN</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <li className="py-5 px-10">BEAUTY & PERSONAL CARE</li>
+                <li className="py-5 px-10">HOME & DECOR</li>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>KITCHEN</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+              </div>
+            </ul>
+          </div>
+        ) : (
+          <div>
+            <i
+              onClick={toggleMenu}
+              className="text-4xl text-[black] relative cursor-pointer pi pi-align-justify"
+            ></i>
+          </div>
+        )}
+         <div>
+          <img src={ImgA} alt="" />
+        </div>
+        {isTopeOpen ? (
+          <div className="absolute top-0 right-0  h-[auto] bg-white w-[80%]  border-gray-200">
+            <div onClick={RedMenu}  className="flex items-center ">
+              <div  className="cursor-pointer py-6 px-3 text-xl font-bold">
+                <i className="pi pi-chevron-left"></i>
+              </div>
+              <div className="cursor-pointer text-xl font-bold">
+                <p >BACK NAVBAR</p>
+              </div>
+            </div>
+            <hr className="opacity-30 w-full" />
+            <ul className="uppercase text-lg font-bold">
+              <div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>HOME</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>SHOP</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>PRODUCT</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>FEATURES</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>PAGES</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+                <div className="flex py-5 px-10 justify-between items-center">
+                  <li>BLOGS</li>
+                  <i className="pi pi-chevron-right"></i>
+                </div>
+               
+              </div>
+            </ul>
+          </div>
+        ) : (
+          <div>
+            <i
+              onClick={BlackMenu}
+              className="text-4xl text-red-400 relative cursor-pointer pi pi-align-justify"
+            ></i>
+          </div>
+        )}
+    </div>
+    <div>
+      
+    </div>
+   </div>
   );
 }
