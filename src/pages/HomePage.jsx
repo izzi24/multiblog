@@ -701,7 +701,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className=" sm:flex sm:flex-cols-2 gap-5 lg:hidden md:hidden  w-[f] px-5  py-20 transition-transform duration-500 ease-in-out">
+        <div className=" sm:flex sm:flex-cols-1 gap-5 lg:hidden md:hidden  w-[full] px-5  py-20 transition-transform duration-500 ease-in-out">
           {visibleImage.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
@@ -1002,11 +1002,11 @@ export default function HomePage() {
             <div key={index} className=" w-[full] rounded-lg shadow-md">
               <img src={image.image} alt="" />
               <div className=" text-center font-serif py-5 ">
-                <p className="text-red-500 capitalize text-2xl">{image.date}</p>
-                <p className="uppercase text-2xl font-semibold text-gray-900">
+                <p className="text-red-500 capitalize text-xl">{image.date}</p>
+                <p className="uppercase text-xl font-semibold text-gray-900">
                   {image.pText}
                 </p>
-                <p className="uppercase text-2xl  font-semibold text-gray-900">
+                <p className="uppercase text-xl  font-semibold text-gray-900">
                   {image.gText}
                 </p>
                 <div className="flex  py-2 justify-center">
