@@ -1074,7 +1074,21 @@ export default function HomePage() {
         ))}
       </div> */}
 
-      <div className="lg:grid lg:grid-cols-5  sm:grid sm:grid-cols-2 py-30 w-full ">
+<div className="lg:hidden mt-5">
+        <Swiper
+          slidesPerView={5}
+          loop
+        autoplay={{ delay: 5000 }}
+          modules={[Autoplay]}
+        >
+          {arsenal.map((item, index) => (
+            <SwiperSlide key={index}>
+              <img src={item.bax} alt="" className="w-full " />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <div className="lg:grid lg:grid-cols-5  hidden py-30 w-full ">
         {arsenal.map((image, index) => (
           // eslint-disable-next-line react/jsx-key
           <div key={index} className="  px-30  w[full]">
@@ -1082,6 +1096,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
+      
       {/* <Footer/> */}
     </div>
   );
