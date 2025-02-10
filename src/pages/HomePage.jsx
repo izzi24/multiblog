@@ -524,7 +524,9 @@ export default function HomePage() {
   const edibleparach = parach.slice(myIndex, myIndex + 8);
 
   const [activeIndex, setActiveIndex] = useState(Product.slice(0, 3));
-  // const [fumanIndex, setFumanIndex] = useState(Product.slice(0, 1));
+  const [fumanIndex, setFumanIndex] = useState(Product.slice(0, 3));
+  const [atokeIndex, setAtokeIndex] = useState(Product.slice(0, 3));
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -560,11 +562,45 @@ export default function HomePage() {
     const interval = setInterval(() => {
       index = (index + 1) % 6;
       const newImages = [
-        Product[index % 6],
-        Product[(index + 1) % 6],
-        Product[(index + 2) % 6],
+        // Product[index % 6],
+        Product[(index + 3) % 6],
+        // Product[(index + 2) % 6],
+      
       ];
       setActiveIndex(newImages);
+      
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      index = (index + 1) % 6;
+      const newImages = [
+        Product[index % 6],
+        Product[(index + 3) % 6],
+        Product[(index + 2) % 6],
+      
+      ];
+      setFumanIndex(newImages);
+      
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      index = (index + 1) % 6;
+      const newImages = [
+        // Product[index % 6],
+        Product[(index + 3) % 6],
+        Product[(index + 2) % 6],
+      
+      ];
+      setAtokeIndex(newImages);
       
     }, 3000);
 
@@ -665,7 +701,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className=" hidden sm:grid sm:grid-cols-2 gap-5 md:hidden  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
+        <div className=" sm:flex sm:flex-cols-2 gap-5 lg:hidden md:hidden  w-[f] px-5  py-20 transition-transform duration-500 ease-in-out">
           {visibleImage.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
@@ -921,8 +957,48 @@ export default function HomePage() {
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
       </div>
-      <div className="grid grid-cols-1  lg:grid-cols-3 md:grid-cols-2 py-10  w-full gap-5 px-4">
+      <div className="grid grid-cols-1  lg:ghidden md:hidden py-10 overflow-hidden w-full gap-5 px-4">
           {activeIndex.map((image, index) => (
+            <div key={index} className=" w-[full] rounded-lg shadow-md">
+              <img src={image.image} alt="" />
+              <div className=" text-center font-serif py-5 ">
+                <p className="text-red-500 capitalize text-2xl">{image.date}</p>
+                <p className="uppercase text-2xl font-semibold text-gray-900">
+                  {image.pText}
+                </p>
+                <p className="uppercase text-2xl  font-semibold text-gray-900">
+                  {image.gText}
+                </p>
+                <div className="flex  py-2 justify-center">
+                  <hr className="w-26  bg-red-500 h-[3px] border-0" />
+                </div>
+                <p className="py-2 capitalize">{image.author}</p>
+              </div>
+            </div>
+          ))}
+       </div>
+       <div className=" lg:grid lg:grid-cols-3  hidden md:hidden py-10 overflow-hidden w-full gap-5 px-4">
+          {fumanIndex.map((image, index) => (
+            <div key={index} className=" w-[full] rounded-lg shadow-md">
+              <img src={image.image} alt="" />
+              <div className=" text-center font-serif py-5 ">
+                <p className="text-red-500 capitalize text-2xl">{image.date}</p>
+                <p className="uppercase text-2xl font-semibold text-gray-900">
+                  {image.pText}
+                </p>
+                <p className="uppercase text-2xl  font-semibold text-gray-900">
+                  {image.gText}
+                </p>
+                <div className="flex  py-2 justify-center">
+                  <hr className="w-26  bg-red-500 h-[3px] border-0" />
+                </div>
+                <p className="py-2 capitalize">{image.author}</p>
+              </div>
+            </div>
+          ))}
+       </div>
+       <div className=" md:grid md:grid-cols-2 lg:hidden hidden py-10  w-full gap-5 px-4">
+          {atokeIndex.map((image, index) => (
             <div key={index} className=" w-[full] rounded-lg shadow-md">
               <img src={image.image} alt="" />
               <div className=" text-center font-serif py-5 ">
