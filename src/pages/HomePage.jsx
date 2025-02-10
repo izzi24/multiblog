@@ -635,20 +635,35 @@ export default function HomePage() {
       {/* <Header2 /> */}
       <Hero />
 
-      {/* <div className=" lg:flex gap-10 font-serif justify-center  sm:hidden overflow-hidden  sm:grid-cols-1   mt-20  w-full">
+      <div className=" hidden lg:flex gap-10 font-serif justify-center  overflow-hidden  md:flex   mt-20  w-full">
         <div className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
           <div className="cute text-center pr-10">
-            <p className="text-red-500 text-3xl font-semibold">10% OFF</p>
-            <h1 className="text-black text-7xl">MEN</h1>
+            <p className="text-red-500 text-xl lg:text-3xl font-semibold">10% OFF</p>
+            <h1 className="text-black text-2xl lg:text-5xl">MEN</h1>
           </div>
         </div>
         <div className="picture flex justify-end items-center  bg-white  w-[35%]">
           <div className="cute text-center pr-10">
-            <p className="text-red-500 text-3xl font-semibold">10% OFF</p>
-            <h1 className="text-black text-7xl">WOMEN</h1>
+            <p className="text-red-500 lg:text-3xl text-xl font-semibold">10% OFF</p>
+            <h1 className="text-black text-2xl lg:text-5xl">WOMEN</h1>
           </div>
         </div>
-      </div> */}
+      </div>
+      <div className="sm: sm: lg:hidden font-serif  overflow-hidden  md:hidden  mt-20  w-full">
+        <div className="pictur bg-white  flex justify-end   items-center w-[full]  ">
+          <div className="cute text-center pr-10">
+            <p className="text-red-500 text-xl font-semibold">10% OFF</p>
+            <h1 className="text-black text-2xl ">MEN</h1>
+          </div>
+        </div>
+        <div className="picture flex justify-end items-center mt-5 overflow-hidden bg-white  w-[full]">
+          <div className="cute text-center pr-10">
+            <p className="text-red-500  text-xl font-semibold">10% OFF</p>
+            <h1 className="text-black text-2xl ">WOMEN</h1>
+          </div>
+        </div>
+      </div>
+
       <div className="mt-15 m-3 text-center">
         <p className="capitalize text-red-400 text-xl  lg:text-3xl md:text-2xl font-light lg:font-medium">
           special offer
@@ -959,7 +974,7 @@ export default function HomePage() {
       </div>
       <div className="grid grid-cols-1  lg:ghidden md:hidden py-10 overflow-hidden w-full gap-5 px-4">
           {activeIndex.map((image, index) => (
-            <div key={index} className=" w-[full] rounded-lg shadow-md">
+            <div key={index} className=" w-[full] ">
               <img src={image.image} alt="" />
               <div className=" text-center font-serif py-5 ">
                 <p className="text-red-500 capitalize text-2xl">{image.date}</p>
@@ -979,7 +994,7 @@ export default function HomePage() {
        </div>
        <div className=" lg:grid lg:grid-cols-3  hidden md:hidden py-10 overflow-hidden w-full gap-5 px-4">
           {fumanIndex.map((image, index) => (
-            <div key={index} className=" w-[full] rounded-lg shadow-md">
+            <div key={index} className=" w-[full] ">
               <img src={image.image} alt="" />
               <div className=" text-center font-serif py-5 ">
                 <p className="text-red-500 capitalize text-2xl">{image.date}</p>
@@ -999,7 +1014,7 @@ export default function HomePage() {
        </div>
        <div className=" md:grid md:grid-cols-2 lg:hidden hidden py-10  w-full gap-5 px-4">
           {atokeIndex.map((image, index) => (
-            <div key={index} className=" w-[full] rounded-lg shadow-md">
+            <div key={index} className=" w-[full] ">
               <img src={image.image} alt="" />
               <div className=" text-center font-serif py-5 ">
                 <p className="text-red-500 capitalize text-xl">{image.date}</p>
@@ -1016,6 +1031,9 @@ export default function HomePage() {
               </div>
             </div>
           ))}
+       </div>
+       <div className="text-center pb-5">
+        <h1 className="text-3xl font-bold">#INSTAGRAM</h1>
        </div>
       <div className="hidden lg:grid lg:grid-cols-6  w-full ">
         {arsenal.map((image, index) => (

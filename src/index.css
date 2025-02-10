@@ -6,15 +6,17 @@
 } */
  .pictur{
     background-image: url('./images/3.jpg');
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
+    height: 30vh;
     background-repeat: no-repeat;
     
  }
  .picture{
     background-image: url('./images/4.jpg');
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
+    height: 30vh;
     background-repeat: no-repeat;
     
 }
@@ -26,6 +28,7 @@
 }
 .pictur:hover{
     transform: scale(1.1);
+    
 
     transition: 0.7s;
 }
