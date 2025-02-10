@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 // import Header from "../components/Header";
 // import Header2 from "../components/Header2";
 import Hero from "../components/Hero";
-// import Footer from "../components/Footer";
+import Footer from "../components/Footer";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
@@ -1097,7 +1097,7 @@ export default function HomePage() {
         ))}
       </div>
       
-      {/* <Footer/> */}
+      <Footer/>
     </div>
   );
 }

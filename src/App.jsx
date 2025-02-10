@@ -1,5 +1,6 @@
 
 import './App.css'
+// import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 // import Login from './pages/Login'
 // import Header from './components/Header'
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
     {/* <Header/> */}
+    {/* <Footer/> */}
       {/* <Header2/> */}
       {/* <Hero/> */}
       <HomePage/>
