@@ -40,7 +40,7 @@ export default function Hero() {
         className=" bg-center bg-cover   w-full h-[78vh] "
         style={{ backgroundImage: ` url(${slides[currentSlide].image})` }}
       >
-        <div className=" flex flex-col lg:hidden md:hidden relative w-full h-[78vh]  justify-center items-center">
+        <div className=" flex flex-col lg:hidden md:hidden w-full h-[78vh]  justify-center items-center">
           <h1 className=" text-[#777777] text-lg">
             {slides[currentSlide].TextP}
           </h1>
@@ -54,7 +54,7 @@ export default function Hero() {
             <div className="flex justify-between lg:px-20 sm:px-2">
               <i
                 onClick={nextSlide}
-                className="pi pi-chevron-left p-2  bg-gray-200  rounded-full"
+                className="pi pi-chevron-left p-2   bg-gray-200  rounded-full"
               ></i>
               <i
                 onClick={prevSlide}
