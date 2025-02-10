@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="py-5">
+      <div className="py-5 px-1">
         <div className="text-center sm:block lg:hidden md:block w-full">
           <div>
             <h1  className="uppercase py-3 text-gray-700 font-bold">know it all first !</h1>
@@ -194,7 +194,7 @@ export default function Footer() {
       <div className="sm:flex w-[full] lg:hidden  md:block justify-between  bg-white py-5">
         <div className="py-4 px-3 flex">
           <p className="text-xl text-gray-600">
-            &copy; 2024-25 themeforest powered by <span className="font-bold text-gray-600">Roberts Adedapo Emmanuel</span>
+            &copy; 2024-25 theme <span className="text-blue-600 font-semibold ">parach</span> powered by <span className="font-bold text-gray-600">Roberts Adedapo Emmanuel</span>
           </p>
         </div>
 

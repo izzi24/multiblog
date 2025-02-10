@@ -1074,7 +1074,7 @@ export default function HomePage() {
         ))}
       </div> */}
 
-<div className="lg:hidden mt-5">
+<div className="lg:hidden mt-5 pb-5">
         <Swiper
           slidesPerView={5}
           loop
