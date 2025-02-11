@@ -4,6 +4,7 @@ import visa from "../images/american-express.png";
 import visaA from "../images/discover.png";
 import visaB from "../images/visa.png";
 import visaC from "../images/paypal.png";
+import { useState } from "react";
 
 const cards = [
   {
@@ -24,6 +25,10 @@ const cards = [
 ];
 
 export default function Footer() {
+  const [showInfo,  setShowInfo] = useState(false);
+  const [showBase,  setShowBase] = useState(false);
+  const [showCase,  setShowCase] = useState(false);
+  const [showFace,  setShowFace] = useState(false);
   return (
     <div className="bg-gray-100  ">
       {" "}
@@ -53,7 +58,9 @@ export default function Footer() {
       <div className="py-5 px-1">
         <div className="text-center sm:block lg:hidden md:block w-full">
           <div>
-            <h1  className="uppercase py-3 text-gray-700 font-bold">know it all first !</h1>
+            <h1 className="uppercase py-3 text-gray-700 font-bold">
+              know it all first !
+            </h1>
           </div>
           <div className="flex flex-col-2 justify-center ">
             <input
@@ -69,35 +76,110 @@ export default function Footer() {
         <div className="flex w-full lg:block md:hidden    py-3 justify-center">
           <hr className=" w-[95%]  opacity-50 text-gray-600" />
         </div>
-        <div className="lg:hidden sm:block md:block">
+        <div className="lg:hidden sm:block md:block w-full">
           <ul className="px-3">
-            <div className="flex items-center justify-between">
-              <li className="font-bold text-gray-600">ABOUT</li>
-              <i className="pi pi-chevron-down"></i>
+            <div>
+              <div
+                className=" flex items-center justify-between cursor-pointer"
+                onClick={() => setShowInfo(!showInfo)}
+              >
+                <li className="font-bold text-gray-600">ABOUT</li>
+                <i className="pi pi-chevron-down"></i>
+              </div>
+              {showInfo && (
+                <div className=" bg-white px-3  transition-all">
+                  <img src={ImgL} alt="" />
+                  <p className="py-3 text-gray-500 ">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam,
+                  </p>
+                  <div className="flex gap-7 text-md py-5 items-center">
+                    <i className="pi pi-google text-red-600"></i>
+                    <i className="pi pi-linkedin text-blue-600"></i>
+                    <i className="pi pi-twitter"></i>
+                    <i className="pi pi-instagram text-pink-700"></i>
+                    <i className="pi pi-wifi text-blue-500"></i>
+                  </div>
+                </div>
+              )}
             </div>
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
             <div className="flex items-center justify-between">
-              <li className="font-bold text-gray-600">MY ACCOUNT</li>
+              <li
+                className="font-bold text-gray-600  cursor-pointer"
+                onClick={() => setShowBase(!showBase)}
+              >
+                MY ACCOUNT
+              </li>
               <i className="pi pi-chevron-down"></i>
             </div>
+            {showBase && (
+              <div className=" bg-white px-3 py-3 transition-all">
+                <p className=" text-md  text-gray-500">
+                  Womens <br /> Clothing <br />
+                  Accessories <br />
+                  Featured
+                </p>
+              </div>
+            )}
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
             <div className="flex items-center justify-between">
-              <li className="font-bold text-gray-600">WHY WE CHOOSE</li>
+              <li
+                className="font-bold text-gray-600  cursor-pointer"
+                onClick={() => setShowCase(!showCase)}
+              >
+                WHY WE CHOOSE
+              </li>
               <i className="pi pi-chevron-down"></i>
             </div>
+            {showCase && (
+              <div className=" bg-white px-3 py-3 transition-all">
+                <p className=" text-md  text-gray-500">
+                  Shipping & Return <br /> Secure Shopping <br />
+                  Gallarry <br />
+                  Affiliates <br />
+                  Contacts
+                </p>
+              </div>
+            )}
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
             <div className="flex items-center justify-between">
-              <li className=" font-bold text-gray-600">STORE INFORMATION</li>
+              <li
+                className=" font-bold text-gray-600  cursor-pointer"
+                onClick={() => setShowFace(!showFace)}
+              >
+                STORE INFORMATION
+              </li>
               <i className="pi pi-chevron-down"></i>
             </div>
+            {showFace && (
+              <div className=" bg-white text-gray-600 px-3 py-3 transition-all">
+                <div className="flex py-3 gap-3">
+                  <i className="pi pi-map-marker "></i>
+                  <p>Multikart Demo Store, parach store Orogun ibadan Oyo State </p>
+                </div>
+                <div className="flex gap-3 py-3 items-center">
+                <i className="pi pi-phone "></i>
+                <p> Call Us: +234 9042965689</p>
+                </div>
+                <div className="flex gap-3 py-3  items-center">
+                <i className="pi pi-envelope"></i>
+                <p> Email Us: Adedapotope57@gmail.com</p>
+                </div>
+                <div className="flex gap-3 py-3 items-center">
+                <i className="pi pi-mobile"></i>
+                <p> Fax: 123456</p>
+                </div>
+              </div>
+            )}
           </ul>
-          
         </div>
       </div>
       <div className="flex w-full md:hidden lg:hidden   py-3 justify-center">
@@ -146,7 +228,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-[25%] capitalize text-start">
-          <h1 className="py-7 text-2xl font-semibold text-gray-900 uppercase">
+          <h1 className="py-7 text-2xl font-semibold text-gray-900 uppercase ">
             store information
           </h1>
           <div className="lg:block sm:hidden">
@@ -194,7 +276,12 @@ export default function Footer() {
       <div className="sm:flex w-[full] lg:hidden  md:block justify-between  bg-white py-5">
         <div className="py-4 px-3 flex">
           <p className="text-xl text-gray-600">
-            &copy; 2024-25 theme <span className="text-blue-600 font-semibold ">parach</span> powered by <span className="font-bold text-gray-600">Roberts Adedapo Emmanuel</span>
+            &copy; 2024-25 theme{" "}
+            <span className="text-blue-600 font-semibold ">parach</span> powered
+            by{" "}
+            <span className="font-bold text-gray-600">
+              Roberts Adedapo Emmanuel
+            </span>
           </p>
         </div>
 

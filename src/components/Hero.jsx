@@ -40,7 +40,7 @@ export default function Hero() {
         className=" bg-center bg-cover   w-full h-[78vh] "
         style={{ backgroundImage: ` url(${slides[currentSlide].image})` }}
       >
-        <div className=" flex flex-col lg:hidden md:hidden w-full h-[78vh]  justify-center items-center">
+        <div className=" flex flex-col  lg:hidden md:hidden w-full h-[78vh]  justify-center items-center">
           <h1 className=" text-[#777777] text-lg">
             {slides[currentSlide].TextP}
           </h1>
@@ -50,7 +50,7 @@ export default function Hero() {
           <button className="mt-3 px-6 py-2 uppercase text-white text-lg   font-semibold bg-[#ff4c3b]">
             {slides[currentSlide].ShopT}
           </button>
-          <div className="  absolute  w-[100%] ">
+          <div className="   opacity-100 group-hover:opacity-100 transition-opacity duration-300  w-[100%] ">
             <div className="flex justify-between lg:px-20 sm:px-2">
               <i
                 onClick={nextSlide}
