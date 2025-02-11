@@ -54,11 +54,11 @@ export default function Hero() {
             <div className="flex justify-between lg:px-20 sm:px-2">
               <i
                 onClick={nextSlide}
-                className="pi pi-chevron-left p-2   bg-gray-200  rounded-full"
+                className="pi pi-chevron-left p-2   bg-gray-50  rounded-full"
               ></i>
               <i
                 onClick={prevSlide}
-                className="pi pi-chevron-right p-2  bg-gray-200 rounded-full"
+                className="pi pi-chevron-right p-2  bg-gray-50 rounded-full"
               ></i>
             </div>
           </div>

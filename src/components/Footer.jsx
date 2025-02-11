@@ -87,8 +87,8 @@ export default function Footer() {
                 <i className="pi pi-chevron-down"></i>
               </div>
               {showInfo && (
-                <div className=" bg-white px-3  transition-all">
-                  <img src={ImgL} alt="" />
+                <div className=" bg-white px-3 rounded-lg  transition-all">
+                  <img src={ImgL} className="py-3" alt="" />
                   <p className="py-3 text-gray-500 ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                     do eiusmod tempor incididunt ut labore et dolore magna
@@ -117,7 +117,7 @@ export default function Footer() {
               <i className="pi pi-chevron-down"></i>
             </div>
             {showBase && (
-              <div className=" bg-white px-3 py-3 transition-all">
+              <div className=" bg-white px-3 py-3 rounded-lg transition-all">
                 <p className=" text-md  text-gray-500">
                   Womens <br /> Clothing <br />
                   Accessories <br />
@@ -138,7 +138,7 @@ export default function Footer() {
               <i className="pi pi-chevron-down"></i>
             </div>
             {showCase && (
-              <div className=" bg-white px-3 py-3 transition-all">
+              <div className=" bg-white px-3 py-3 rounded-lg transition-all">
                 <p className=" text-md  text-gray-500">
                   Shipping & Return <br /> Secure Shopping <br />
                   Gallarry <br />
@@ -160,7 +160,7 @@ export default function Footer() {
               <i className="pi pi-chevron-down"></i>
             </div>
             {showFace && (
-              <div className=" bg-white text-gray-600 px-3 py-3 transition-all">
+              <div className=" bg-white text-gray-600 px-3 py-3 rounded-lg transition-all">
                 <div className="flex py-3 gap-3">
                   <i className="pi pi-map-marker "></i>
                   <p>Multikart Demo Store, parach store Orogun ibadan Oyo State </p>
