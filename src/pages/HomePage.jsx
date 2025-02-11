@@ -88,6 +88,7 @@ const arsenal = [
   {
     image: ImgTl,
     icons: "pi-instagram",
+    bax:  ImgTo,
   },
 ];
 // const bucketList = [
@@ -1094,7 +1095,7 @@ export default function HomePage() {
 
 <div className="lg:hidden mt-5 pb-5">
         <Swiper
-          slidesPerView={5}
+          slidesPerView={4}
           loop
         autoplay={{ delay: 5000 }}
           modules={[Autoplay]}
