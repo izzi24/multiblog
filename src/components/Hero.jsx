@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import ImgB from "../images/1.jpg";
 import ImgC from "../images/2.jpg";
+import AOS from "aos";
+
 
 const slides = [
   {
@@ -34,8 +36,20 @@ export default function Hero() {
     return () => clearInterval(interval);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [slides.length]);
+
+   useEffect(() => {
+      AOS.init({
+        duration: 2000, // Animation duration (default: 400ms)
+        once: true, // Whether animation should happen only once
+        easing: "ease-in-out", // Animation easing function
+      });
+    }, []);
+  
+    useEffect(() =>{
+      AOS.refresh();
+    })
   return (
-    <div className=" font-serif  capitalize ">
+    <div  data-aos="zoom-in" className=" font-serif  capitalize ">
       <div
         className=" bg-center bg-cover   w-full h-[78vh] "
         style={{ backgroundImage: ` url(${slides[currentSlide].image})` }}

@@ -107,10 +107,10 @@ export default function Footer() {
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between" onClick={() => setShowBase(!showBase)}>
               <li
                 className="font-bold text-gray-600  cursor-pointer"
-                onClick={() => setShowBase(!showBase)}
+                
               >
                 MY ACCOUNT
               </li>
@@ -128,10 +128,10 @@ export default function Footer() {
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between"onClick={() => setShowCase(!showCase)}>
               <li
                 className="font-bold text-gray-600  cursor-pointer"
-                onClick={() => setShowCase(!showCase)}
+               
               >
                 WHY WE CHOOSE
               </li>
@@ -150,10 +150,10 @@ export default function Footer() {
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between" onClick={() => setShowFace(!showFace)}>
               <li
                 className=" font-bold text-gray-600  cursor-pointer"
-                onClick={() => setShowFace(!showFace)}
+                
               >
                 STORE INFORMATION
               </li>

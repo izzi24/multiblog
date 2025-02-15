@@ -7,6 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
+import AOS from "aos";
 
 import ImgD from "../images/5.jpg";
 import ImgE from "../images/6.jpg";
@@ -608,6 +609,17 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000, // Animation duration (default: 400ms)
+      once: true, // Whether animation should happen only once
+      easing: "ease-in-out", // Animation easing function
+    });
+  }, []);
+
+  useEffect(() =>{
+    AOS.refresh();
+  })
   // useEffect(() => {
   //   const updateGridCols = () => {
   //     if (window.innerWidth >= 1024) setCols(3); // lg: Show 3 images
@@ -637,13 +649,13 @@ export default function HomePage() {
       <Hero />
 
       <div className=" hidden lg:flex gap-10 font-serif justify-center  overflow-hidden  md:flex   mt-20  w-full">
-        <div className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
+        <div   data-aos="fade-right" className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
           <div className="cute text-center pr-10">
             <p className="text-red-500 text-xl lg:text-3xl font-semibold">10% OFF</p>
             <h1 className="text-black text-2xl lg:text-5xl">MEN</h1>
           </div>
         </div>
-        <div className="picture flex justify-end items-center  bg-white  w-[35%]">
+        <div data-aos="fade-left" className="picture flex justify-end items-center  bg-white  w-[35%]">
           <div className="cute text-center pr-10">
             <p className="text-red-500 lg:text-3xl text-xl font-semibold">10% OFF</p>
             <h1 className="text-black text-2xl lg:text-5xl">WOMEN</h1>
@@ -665,7 +677,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div className="mt-15 m-3 text-center">
+      <div  data-aos="fade-up-left" className="mt-15 m-3 text-center">
         <p className="capitalize text-red-400 text-xl  lg:text-3xl md:text-2xl font-light lg:font-medium">
           special offer
         </p>
@@ -673,7 +685,7 @@ export default function HomePage() {
           TOP COLLECTION
         </p>
       </div>
-      <div className="flex  justify-center">
+      <div data-aos="fade-up-left" className="flex  justify-center">
         <hr className="w-26  bg-red-500 h-[2px] border-0" />
       </div>
       <div className="text-center mt-7 flex justify-center lg:w-[full]">
@@ -683,7 +695,7 @@ export default function HomePage() {
           since the 1500s,
         </p>
       </div>
-      <div className="w-full">
+      <div data-aos="fade-up-right" className="w-full">
         <div className=" hidden  lg:grid lg:grid-cols-4 gap-4  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
           {visibleImages.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
@@ -717,7 +729,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className=" sm:flex sm:flex-cols-1 gap-5 lg:hidden md:hidden  w-[full] px-5  py-20 transition-transform duration-500 ease-in-out">
+        <div data-aos="flip-left" className=" sm:flex sm:flex-cols-1 gap-5 lg:hidden md:hidden  w-[full] px-5  py-20 transition-transform duration-500 ease-in-out">
           {visibleImage.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
@@ -750,7 +762,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <div className="lg:hidden hidden md:grid md:grid-cols-3 gap-5  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
+        <div data-aos="flip-left" className="lg:hidden hidden md:grid md:grid-cols-3 gap-5  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
           {visibleIma.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className=" ">
@@ -784,8 +796,8 @@ export default function HomePage() {
           ))}
         </div>
       </div>
-      <div className="special text-center bg-center bg-fixed bg-no-repeat w-[100]  justify-center lg:justify-start md:justify-start lg:px-10 lg: h-screen relative flex items-center  ">
-        <div className=" lg:hidden text-center md:hidden  sm:text-5xl sm:font-bold     sm:h-[30vh] ">
+      <div  className="special text-center bg-center bg-fixed bg-no-repeat w-[100]  justify-center lg:justify-start md:justify-start lg:px-10 lg: h-screen relative flex items-center  ">
+        <div data-aos="flip-left" className=" lg:hidden text-center md:hidden  sm:text-5xl sm:font-bold     sm:h-[30vh] ">
           <p>
             {" "}
             <span className="text-[#ff4c3b] lg:text-9xl font-bold text-5xl  sm:text-center    lg:  block">
@@ -799,7 +811,7 @@ export default function HomePage() {
             special offer
           </span>
         </div>
-        <div className="hidden lg:block  text-center  lg:text-9xl md:hidden lg:font-bold     lg:h-[30vh] ">
+        <div data-aos="flip-left" className="hidden lg:block  text-center  lg:text-9xl md:hidden lg:font-bold     lg:h-[30vh] ">
           <p className="">
             {" "}
             <span className="text-[#ff4c3b] lg:text-9xl font-bold text-4xl  sm:text-center      block">
@@ -813,7 +825,7 @@ export default function HomePage() {
             special offer
           </p>
         </div>
-        <div className="hidden lg:hidden md:block  text-center  md:text-6xl md:font-bold     md:h-[30vh] ">
+        <div data-aos="flip-left" className="hidden lg:hidden md:block  text-center  md:text-6xl md:font-bold     md:h-[30vh] ">
           <p className="">
             {" "}
             <span className="text-[#ff4c3b] lg:text-9xl font-bold text-4xl  sm:text-center      block">
@@ -828,11 +840,11 @@ export default function HomePage() {
           </p>
         </div>
       </div>
-      <div className="text-center font-sans-serif w-full mt-20 px-2">
-        <p className="capitalize lg:text-3xl   text-red-500">
+      <div  className="text-center font-sans-serif w-full mt-20 px-2">
+        <p  data-aos="fade-up" className="capitalize lg:text-3xl   text-red-500">
           exclusive products
         </p>
-        <h2 className="uppercase text-xl text-center  lg:5xl md:3xl py-2 font-medium">
+        <h2  data-aos="zoom-in" className="uppercase text-xl text-center  lg:5xl md:3xl py-2 font-medium">
           special produts
         </h2>
         <div className="flex  justify-center">
@@ -850,7 +862,7 @@ export default function HomePage() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-4 md:grid md:grid-cols-2 md:gap-10 sm:grid sm:grid-cols-2    w-full px-10  py-20 transition-transform duration-500 ease-in-out">
+      <div data-aos="zoom-in" className="grid grid-cols-2 lg:grid lg:grid-cols-4 gap-4 md:grid md:grid-cols-2 md:gap-10 sm:grid sm:grid-cols-2    w-full px-10  py-20 transition-transform duration-500 ease-in-out">
         {edibleparach.map((item, index) => (
           // eslint-disable-next-line react/jsx-key
           <div key={index} className=" ">
@@ -925,7 +937,7 @@ export default function HomePage() {
         </div>
         
       </div> */}
-      <div className="lg:hidden sm:block text-center md:hidden justify-around px-20 py-3 pb-3 gap-10  w-full">
+      <div data-aos="zoom-in" className="lg:hidden sm:block text-center md:hidden justify-around px-20 py-3 pb-3 gap-10  w-full">
           {pythons.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
             <div key={index} className="py-3">
@@ -944,7 +956,7 @@ export default function HomePage() {
             <hr className="opacity-30 w-[90%] " />
           </div>
       <div/>
-      <div className="lg:flex   hidden md:flex text-center px-20  py-3 pb-3 gap-20 justify-center  w-full">
+      <div data-aos="zoom-in" className="lg:flex   hidden md:flex text-center px-20  py-3 pb-3 gap-20 justify-center  w-full">
         
           {pythons.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
@@ -964,7 +976,7 @@ export default function HomePage() {
             <hr className="opacity-30 w-[90%] " />
           </div>
       <div/>
-      <div className=" text-center pt-5">
+      <div data-aos="flip-left" className=" text-center pt-5">
         <p className="capitalize text-xl lg:3xl text-red-500">our collection</p>
         <p className="uppercase lg:text-5xl  text-2xl py-2 font-medium">
           special product
@@ -973,7 +985,7 @@ export default function HomePage() {
           <hr className="w-26  bg-red-500 h-[3px] border-0" />
         </div>
       </div>
-      <div className="grid grid-cols-1  lg:ghidden md:hidden py-10 overflow-hidden w-full gap-5 px-4">
+      <div data-aos="flip-left" className="grid grid-cols-1  lg:ghidden md:hidden py-10 overflow-hidden w-full gap-5 px-4">
           {activeIndex.map((image, index) => (
             <div key={index} className=" w-[full] ">
               <img src={image.image} alt="" />
@@ -993,7 +1005,7 @@ export default function HomePage() {
             </div>
           ))}
        </div>
-       <div className=" lg:grid lg:grid-cols-3  hidden md:hidden py-10 overflow-hidden w-full gap-5 px-4">
+       <div data-aos="flip-right" className=" lg:grid lg:grid-cols-3  hidden md:hidden py-10 overflow-hidden w-full gap-5 px-4">
           {fumanIndex.map((image, index) => (
             <div key={index} className=" w-[full] ">
               <img src={image.image} alt="" />
@@ -1013,7 +1025,7 @@ export default function HomePage() {
             </div>
           ))}
        </div>
-       <div className=" md:grid md:grid-cols-2 lg:hidden hidden py-10  w-full gap-5 px-4">
+       <div data-aos="flip-left" className=" md:grid md:grid-cols-2 lg:hidden hidden py-10  w-full gap-5 px-4">
           {atokeIndex.map((image, index) => (
             <div key={index} className=" w-[full] ">
               <img src={image.image} alt="" />
@@ -1036,7 +1048,7 @@ export default function HomePage() {
        <div className="text-center pb-5">
         <h1 className="text-3xl font-bold">#INSTAGRAM</h1>
        </div>
-      <div className="hidden lg:grid lg:grid-cols-6  w-full ">
+      <div data-aos="flip-right" className="hidden lg:grid lg:grid-cols-6  w-full ">
         {arsenal.map((image, index) => (
           // eslint-disable-next-line react/jsx-key
           <div
@@ -1050,7 +1062,7 @@ export default function HomePage() {
           </div>
         ))}
       </div>
-      <div className="hidden md:grid md:grid-cols-6 lg:hidden  w-full ">
+      <div data-aos="flip-left" className="hidden md:grid md:grid-cols-6 lg:hidden  w-full ">
         {arsenal.map((image, index) => (
           // eslint-disable-next-line react/jsx-key
           <div
@@ -1093,7 +1105,7 @@ export default function HomePage() {
         ))}
       </div> */}
 
-<div className="lg:hidden mt-5 pb-5">
+<div className="lg:hidden gap-3 mt-5 pb-5">
         <Swiper
           slidesPerView={4}
           loop
@@ -1107,11 +1119,12 @@ export default function HomePage() {
           ))}
         </Swiper>
       </div>
-      <div className="lg:grid lg:grid-cols-5  hidden py-30 w-full ">
-        {arsenal.map((image, index) => (
+      
+      <div className="lg:grid lg:grid-cols-4 gap-1  hidden py-20  ">
+        {arsenal.map((item, index) => (
           // eslint-disable-next-line react/jsx-key
           <div key={index} className="  px-30  w[full]">
-            <img className=" " src={image.bax} alt="" />
+            <img className=" " src={item.bax} alt="" />
           </div>
         ))}
       </div>
