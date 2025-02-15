@@ -49,8 +49,8 @@ export default function Hero() {
       AOS.refresh();
     })
   return (
-    <div   className=" font-serif  capitalize ">
-      <div data-aos="flip-down"
+    <div  data-aos="zoom-in" className=" font-serif  capitalize ">
+      <div
         className=" bg-center bg-cover   w-full h-[78vh] "
         style={{ backgroundImage: ` url(${slides[currentSlide].image})` }}
       >

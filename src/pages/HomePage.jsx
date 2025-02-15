@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
-import AOS from "aos";
+// import AOS from "aos";
 
 import ImgD from "../images/5.jpg";
 import ImgE from "../images/6.jpg";
@@ -609,17 +609,17 @@ export default function HomePage() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    AOS.init({
-      duration: 2000, // Animation duration (default: 400ms)
-      once: true, // Whether animation should happen only once
-      easing: "ease-in-out", // Animation easing function
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 2000, // Animation duration (default: 400ms)
+  //     once: true, // Whether animation should happen only once
+  //     easing: "ease-in-out", // Animation easing function
+  //   });
+  // }, []);
 
-  useEffect(() =>{
-    AOS.refresh();
-  })
+  // useEffect(() =>{
+  //   AOS.refresh();
+  // })
   // useEffect(() => {
   //   const updateGridCols = () => {
   //     if (window.innerWidth >= 1024) setCols(3); // lg: Show 3 images
@@ -649,13 +649,13 @@ export default function HomePage() {
       <Hero />
 
       <div className=" hidden lg:flex gap-10 font-serif justify-center  overflow-hidden  md:flex   mt-20  w-full">
-        <div   data-aos="fade-right" className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
+        <div    className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
           <div className="cute text-center pr-10">
             <p className="text-red-500 text-xl lg:text-3xl font-semibold">10% OFF</p>
             <h1 className="text-black text-2xl lg:text-5xl">MEN</h1>
           </div>
         </div>
-        <div data-aos="fade-left" className="picture flex justify-end items-center  bg-white  w-[35%]">
+        <div  className="picture flex justify-end items-center  bg-white  w-[35%]">
           <div className="cute text-center pr-10">
             <p className="text-red-500 lg:text-3xl text-xl font-semibold">10% OFF</p>
             <h1 className="text-black text-2xl lg:text-5xl">WOMEN</h1>
@@ -663,7 +663,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className="sm: sm: lg:hidden font-serif  overflow-hidden  md:hidden  mt-20  w-full">
-        <div className="pictur bg-white  flex justify-end   items-center w-[full]  ">
+        <div  className="pictur bg-white  flex justify-end   items-center w-[full]  ">
           <div className="cute text-center pr-10">
             <p className="text-red-500 text-xl font-semibold">10% OFF</p>
             <h1 className="text-black text-2xl ">MEN</h1>
@@ -677,7 +677,7 @@ export default function HomePage() {
         </div>
       </div>
 
-      <div  data-aos="fade-up-left" className="mt-15 m-3 text-center">
+      <div  data-aos="fade-up" className="mt-15 m-3 text-center">
         <p className="capitalize text-red-400 text-xl  lg:text-3xl md:text-2xl font-light lg:font-medium">
           special offer
         </p>
@@ -685,7 +685,7 @@ export default function HomePage() {
           TOP COLLECTION
         </p>
       </div>
-      <div data-aos="fade-up-left" className="flex  justify-center">
+      <div data-aos="fade-up" className="flex  justify-center">
         <hr className="w-26  bg-red-500 h-[2px] border-0" />
       </div>
       <div className="text-center mt-7 flex justify-center lg:w-[full]">
@@ -695,7 +695,7 @@ export default function HomePage() {
           since the 1500s,
         </p>
       </div>
-      <div data-aos="fade-up-right" className="w-full">
+      <div data-aos="zoom-in" className="w-full">
         <div className=" hidden  lg:grid lg:grid-cols-4 gap-4  w-[full] px-10  py-20 transition-transform duration-500 ease-in-out">
           {visibleImages.map((item, index) => (
             // eslint-disable-next-line react/jsx-key
