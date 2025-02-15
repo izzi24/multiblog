@@ -32,7 +32,7 @@ export default function Footer() {
   return (
     <div className="bg-gray-100  ">
       {" "}
-      <div className="hidden lg:flex  md:hidden sm:text-center justify-around items-center px-10">
+      <div  data-aos="zoom-in-right" className="hidden lg:flex  md:hidden sm:text-center justify-around items-center px-10">
         <div>
           <p className="text-2xl  font-bold text-gray-">KNOW IT ALL FIRST!</p>
           <p className="text-xl ">
@@ -55,8 +55,8 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="py-5 px-1">
-        <div className="text-center sm:block lg:hidden md:block w-full">
+      <div  className="py-5 px-1">
+        <div  data-aos="zoom-in-right" className="text-center sm:block lg:hidden md:block w-full">
           <div>
             <h1 className="uppercase py-3 text-gray-700 font-bold">
               know it all first !
@@ -73,10 +73,10 @@ export default function Footer() {
             </button>
           </div>
         </div>
-        <div className="flex w-full lg:block md:hidden    py-3 justify-center">
+        <div  data-aos="zoom-in-right" className="flex w-full lg:block md:hidden    py-3 justify-center">
           <hr className=" w-[95%]  opacity-50 text-gray-600" />
         </div>
-        <div className="lg:hidden sm:block md:block w-full">
+        <div  data-aos="zoom-in-right" className="lg:hidden sm:block md:block w-full">
           <ul className="px-3">
             <div>
               <div
