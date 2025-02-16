@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 // import Header from "../components/Header";
 import Header2 from "../components/Header2";
+import Footer2 from "../components/Footer2";
 
 export default function Login() {
   return (
@@ -100,6 +101,7 @@ export default function Login() {
         </div>
       </div>
       <Footer />
+      <Footer2 />
     </div>
   );
 }
