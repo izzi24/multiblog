@@ -59,19 +59,19 @@ export default function Login() {
           </div>
         </div>
       </div>
-      <div className=" lg:hidden w-full gap-10 grid grid-cols-1 capitalizen px-20  pb-10 justify-between mt-20  text-start">
+      <div className=" lg:hidden w-full gap-10 grid grid-cols-1 capitalizen px-5  pb-10 justify-between mt-10  text-start">
         <div className=" w-[100%]  text-gray-800 text-2xl">
           <p className="font-bold py-3">LOGIN</p>
-          <div className=" px-10 py-10 border  w-[100%]">
+          <div className=" px-5 py-4 border  w-[100%]">
             <p className="py-3 font-bold capitalize">email</p>
             <input
-              className="w-full py-5 border px-5 "
+              className="w-full py-5 border px-3 "
               type="Email"
               placeholder="Email"
             />
             <p className="py-3 capitalize font-bold">password</p>
             <input
-              className="w-full border py-5 px-5 "
+              className="w-full border py-5 px-3 "
               type="password"
               placeholder="password"
             />
@@ -82,9 +82,9 @@ export default function Login() {
             </div>
           </div>
         </div>
-        <div className=" text-gray-800 w-[100%] text-2xl">
+        <div className=" text-gray-800 w-[100%] text-xl">
           <p className="text-2xl font-bold py-3">NEW CUSTOMER</p>
-          <div className=" px-10 py-10 border  w-[100%]  ">
+          <div className=" px-5 py-5 border  w-[100%]  ">
             <p className="py-3 font-bold capitalize">CREATE AN ACCOUNT</p>
             <p className="text-lg tracking-wider">
               Sign up for a free account at our store. Registration is quick and
