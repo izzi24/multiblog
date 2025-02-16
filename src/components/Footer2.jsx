@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import AOS from "aos";
+import { Link } from "react-router-dom";
+
 
 export default function Footer2() {
 //   const [showInfo, setShowInfo] = useState(false);
@@ -65,9 +67,9 @@ const toggleSection = (section) => {
         {openSection === "user" && (
           <div data-aos="fade-up" className="bg-white px-3 py-3 absolute  -top-40 w-[150px]  transition-all">
             <div className="text-gray-800">
-              <p className="py-2">Login</p>
-              <p className="py-2">Register</p>
-              <p className="py-2">Logout</p>
+              <Link className="py-2 block"to="LoginPage">Login</Link>
+              <Link className="py-2 block"to="/">Register</Link>
+              <Link className="py-2 block"to="/">Logout</Link>
             </div>
           </div>
         )}

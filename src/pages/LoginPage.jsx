@@ -1,23 +1,25 @@
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+// import Header from "../components/Header";
 import Header2 from "../components/Header2";
 
 export default function Login() {
   return (
     <div>
       {/* <Header /> */}
-      {/* <Header2 /> */}
-      <div className="flex justify-between  items-center px-20 bg-gray-300 h-[10vh]">
-        <div className="font-bold text-gray-700 text-xl">LOGIN</div>
-        <div>
-          <ul className="flex gap-3 font-bold text-gray-500 text-xl">
-            <li>HOME</li>
-            <li>/</li>
-            <li>LOGIN</li>
+      <Header2 />
+      <div className="flex justify-center items-center px-20 bg-gray-300 h-[10vh]">
+        <div className="font-bold text-gray-700 text-xl ">LOGIN</div>
+       
+      </div>
+      <div className="text-center">
+          <ul className="flex gap-5 justify-center items-center font-bold text-gray-500 text-xl">
+            <Link className="" to="/">HOME</Link>
+            <Link>/</Link>
+            <Link>LOGIN</Link>
           </ul>
         </div>
-      </div>
-      <div className="flex w-full gap-10 capitalizen px-20  pb-10 justify-between mt-20  text-start">
+      <div className=" lg:flex w-full gap-10 hidden capitalizen px-20  pb-10 justify-between mt-20  text-start">
         <div className=" w-[100%]  text-gray-800 text-2xl">
           <p className="font-bold py-3">LOGIN</p>
           <div className=" px-10 py-10 border  w-[100%]">
