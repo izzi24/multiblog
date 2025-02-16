@@ -32,7 +32,7 @@ const toggleSection = (section) => {
         <div className="">
           <i
             className="pi pi-search "
-            onClick={() => toggleSection(!showInfo)}
+            onClick={() => toggleSection("")}
           ></i>
         </div>
 
@@ -49,7 +49,7 @@ const toggleSection = (section) => {
             onClick={() =>  toggleSection("cart")}
           >
             {" "}
-            <p className="absolute text-md text-white py-1 p-2  bg-red-400 bottom-2 left-3 rounded-full">
+            <p className="absolute text-md text-white py-1 p-2  bg-red-400 bottom-1 left-3 rounded-full">
               0
             </p>
           </i>

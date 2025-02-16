@@ -145,7 +145,7 @@ export default function Header2() {
 
   return (
     <div className="">
-      <div  data-aos="fade-up-right" className="bg-white  lg:flex md:hidden justify-around hidden text-white   items-center h-[14vh]">
+      <div  className="bg-white  lg:flex md:hidden justify-around hidden text-white   items-center h-[14vh]">
         <div className="flex items-center gap-11">
           {isMenuOpen ? (
             <div className="absolute top-0 left-0  h-[100vh] bg-black  border-gray-200">
@@ -251,7 +251,7 @@ export default function Header2() {
         </div>
       </div>
       {/* small screen */}
-      <div className="flex justify-between py-5 lg:hidden md: px-5 h-[12vh] items-center w-full">
+      <div className="flex justify-between py-5 lg:hidden md:hidden px-5 h-[12vh] items-center w-full">
         {isMenuOpen ? (
           <div className="absolute top-0 left-0  h-[auto] bg-white w-[80%]  border-gray-200">
             <div onClick={closeMenu} className="flex items-center ">
