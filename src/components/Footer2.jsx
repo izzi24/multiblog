@@ -27,7 +27,7 @@ const toggleSection = (section) => {
         AOS.refresh();
       })
   return (
-    <div className="bg-gray-600   sm:block md:block lg:hidden bottom-0 sticky z-40 ">
+    <div className="bg-gray-600   sm:block md:hidden lg:hidden bottom-0 sticky z-40 ">
       <div className=" flex justify-evenly h-[8vh] text-gray-200 text-xl items-center">
         <div className="">
           <i
