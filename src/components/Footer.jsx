@@ -25,14 +25,23 @@ const cards = [
 ];
 
 export default function Footer() {
-  const [showInfo,  setShowInfo] = useState(false);
-  const [showBase,  setShowBase] = useState(false);
-  const [showCase,  setShowCase] = useState(false);
-  const [showFace,  setShowFace] = useState(false);
+  // const [showInfo,  setShowInfo] = useState(false);
+  // const [showBase,  setShowBase] = useState(false);
+  // const [showCase,  setShowCase] = useState(false);
+  // const [showFace,  setShowFace] = useState(false);
+
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (section) => {
+    setOpenSection(openSection === section ? null : section);
+  };
   return (
     <div className="bg-gray-100  ">
       {" "}
-      <div  data-aos="zoom-in-right" className="hidden lg:flex  md:hidden sm:text-center justify-around items-center px-10">
+      <div
+        data-aos="zoom-in-right"
+        className="hidden lg:flex  md:hidden sm:text-center justify-around items-center px-10"
+      >
         <div>
           <p className="text-2xl  font-bold text-gray-">KNOW IT ALL FIRST!</p>
           <p className="text-xl ">
@@ -55,8 +64,11 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div  className="py-5 px-1">
-        <div  data-aos="zoom-in-right" className="text-center sm:block lg:hidden md:block w-full">
+      <div className="py-5 px-1">
+        <div
+          data-aos="zoom-in-right"
+          className="text-center sm:block lg:hidden md:block w-full"
+        >
           <div>
             <h1 className="uppercase py-3 text-gray-700 font-bold">
               know it all first !
@@ -73,20 +85,26 @@ export default function Footer() {
             </button>
           </div>
         </div>
-        <div  data-aos="zoom-in-right" className="flex w-full lg:block md:hidden    py-3 justify-center">
+        <div
+          data-aos="zoom-in-right"
+          className="flex w-full lg:block md:hidden    py-3 justify-center"
+        >
           <hr className=" w-[95%]  opacity-50 text-gray-600" />
         </div>
-        <div  data-aos="zoom-in-right" className="lg:hidden sm:block md:block w-full">
+        <div
+          data-aos="zoom-in-right"
+          className="lg:hidden sm:block md:block w-full"
+        >
           <ul className="px-3">
             <div>
               <div
                 className=" flex items-center justify-between cursor-pointer"
-                onClick={() => setShowInfo(!showInfo)}
+                onClick={() => toggleSection("about")}
               >
                 <li className="font-bold text-gray-600">ABOUT</li>
                 <i className="pi pi-chevron-down"></i>
               </div>
-              {showInfo && (
+              {openSection === "about" && (
                 <div className=" bg-white px-3 rounded-lg  transition-all">
                   <img src={ImgL} className="py-3" alt="" />
                   <p className="py-3 text-gray-500 ">
@@ -107,16 +125,16 @@ export default function Footer() {
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
-            <div className="flex items-center justify-between" onClick={() => setShowBase(!showBase)}>
-              <li
-                className="font-bold text-gray-600  cursor-pointer"
-                
-              >
+            <div
+              className="flex items-center justify-between"
+              onClick={() => toggleSection("account")}
+            >
+              <li className="font-bold text-gray-600  cursor-pointer">
                 MY ACCOUNT
               </li>
               <i className="pi pi-chevron-down"></i>
             </div>
-            {showBase && (
+            {openSection === "account" && (
               <div className=" bg-white px-3 py-3 rounded-lg transition-all">
                 <p className=" text-md  text-gray-500">
                   Womens <br /> Clothing <br />
@@ -128,16 +146,16 @@ export default function Footer() {
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
-            <div className="flex items-center justify-between"onClick={() => setShowCase(!showCase)}>
-              <li
-                className="font-bold text-gray-600  cursor-pointer"
-               
-              >
+            <div
+              className="flex items-center justify-between"
+              onClick={() => toggleSection("why")}
+            >
+              <li className="font-bold text-gray-600  cursor-pointer">
                 WHY WE CHOOSE
               </li>
               <i className="pi pi-chevron-down"></i>
             </div>
-            {showCase && (
+            {openSection === "why" && (
               <div className=" bg-white px-3 py-3 rounded-lg transition-all">
                 <p className=" text-md  text-gray-500">
                   Shipping & Return <br /> Secure Shopping <br />
@@ -150,32 +168,34 @@ export default function Footer() {
             <div className="flex w-full   py-3 justify-center">
               <hr className=" w-[100%]  opacity-50 text-gray-600" />
             </div>
-            <div className="flex items-center justify-between" onClick={() => setShowFace(!showFace)}>
-              <li
-                className=" font-bold text-gray-600  cursor-pointer"
-                
-              >
+            <div
+              className="flex items-center justify-between"
+              onClick={() => toggleSection("store")}
+            >
+              <li className=" font-bold text-gray-600  cursor-pointer">
                 STORE INFORMATION
               </li>
               <i className="pi pi-chevron-down"></i>
             </div>
-            {showFace && (
+            {openSection === "store" && (
               <div className=" bg-white text-gray-600 px-3 py-3 rounded-lg transition-all">
                 <div className="flex py-3 gap-3">
                   <i className="pi pi-map-marker "></i>
-                  <p>Multikart Demo Store, parach store Orogun ibadan Oyo State </p>
+                  <p>
+                    Multikart Demo Store, parach store Orogun ibadan Oyo State{" "}
+                  </p>
                 </div>
                 <div className="flex gap-3 py-3 items-center">
-                <i className="pi pi-phone "></i>
-                <p> Call Us: +234 9042965689</p>
+                  <i className="pi pi-phone "></i>
+                  <p> Call Us: +234 9042965689</p>
                 </div>
                 <div className="flex gap-3 py-3  items-center">
-                <i className="pi pi-envelope"></i>
-                <p> Email Us: Adedapotope57@gmail.com</p>
+                  <i className="pi pi-envelope"></i>
+                  <p> Email Us: Adedapotope57@gmail.com</p>
                 </div>
                 <div className="flex gap-3 py-3 items-center">
-                <i className="pi pi-mobile"></i>
-                <p> Fax: 123456</p>
+                  <i className="pi pi-mobile"></i>
+                  <p> Fax: 123456</p>
                 </div>
               </div>
             )}
@@ -294,7 +314,6 @@ export default function Footer() {
           ))}
         </div>
       </div>
-     
     </div>
   );
 }

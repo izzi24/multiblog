@@ -2,11 +2,18 @@ import { useState, useEffect } from "react";
 import AOS from "aos";
 
 export default function Footer2() {
-  const [showInfo, setShowInfo] = useState(false);
-  const [showBase, setShowBase] = useState(false);
-  const [showCase, setShowCase] = useState(false);
-  const [showFace, setShowFace] = useState(false);
-  const [showFlake, setShowFlake] = useState(false);
+//   const [showInfo, setShowInfo] = useState(false);
+//   const [showBase, setShowBase] = useState(false);
+//   const [showCase, setShowCase] = useState(false);
+//   const [showFace, setShowFace] = useState(false);
+//   const [showFlake, setShowFlake] = useState(false);
+
+const [openSection, setOpenSection] = useState(null);
+
+const toggleSection = (section) => {
+  setOpenSection(openSection === section ? null : section);
+};
+
 
   useEffect(() => {
         AOS.init({
@@ -25,21 +32,21 @@ export default function Footer2() {
         <div className="">
           <i
             className="pi pi-search "
-            onClick={() => setShowInfo(!showInfo)}
+            onClick={() => toggleSection(!showInfo)}
           ></i>
         </div>
 
         <div>
           <i
             className="pi pi-heart-fill"
-            onClick={() => setShowBase(!showBase)}
+            onClick={() => toggleSection("")}
           ></i>
         </div>
         <div>
           {" "}
           <i
             className="pi pi-shopping-cart relative"
-            onClick={() => setShowCase(!showCase)}
+            onClick={() =>  toggleSection("cart")}
           >
             {" "}
             <p className="absolute text-md text-white py-1 p-2  bg-red-400 bottom-2 left-3 rounded-full">
@@ -47,16 +54,16 @@ export default function Footer2() {
             </p>
           </i>
         </div>
-        {showCase && (
+        {openSection === "cart" && (
             <div data-aos="">
-                <p className="capitalize bg-white px-3 py-3 absolute left-10 -top-13 text-gray-800 w-[200px] rounded-lg transition-all">your cart is empty</p>
+                <p className="capitalize bg-white px-3 py-3 absolute left-10 -top-14 text-gray-800 w-[200px]  transition-all">your cart is empty</p>
             </div>
         )}
         <div>
-          <i className="pi pi-user" onClick={() => setShowFace(!showFace)}></i>
+          <i className="pi pi-user" onClick={() =>  toggleSection("user")}></i>
         </div>
-        {showFace && (
-          <div data-aos="fade-up" className="bg-white px-3 py-3 absolute  -top-40 w-[150px] rounded-lg transition-all">
+        {openSection === "user" && (
+          <div data-aos="fade-up" className="bg-white px-3 py-3 absolute  -top-40 w-[150px]  transition-all">
             <div className="text-gray-800">
               <p className="py-2">Login</p>
               <p className="py-2">Register</p>
@@ -65,10 +72,10 @@ export default function Footer2() {
           </div>
         )}
         <div>
-          <i className="pi pi-cog" onClick={() => setShowFlake(!showFlake)}></i>
+          <i className="pi pi-cog" onClick={() =>  toggleSection("cog")}></i>
         </div>
-        {showFlake && (
-          <div data-aos="fade-up" className=" bg-white px-3 py-3 absolute -top-63 right-10 w-[150px] text-center rounded-lg transition-all">
+        {openSection === "cog" && (
+          <div data-aos="fade-up" className=" bg-white px-3 py-3 absolute -top-63 right-10 w-[150px] text-center  transition-all">
             <h2 className="  font-bold text-gray-800">Language</h2>
             <p className="px-3 text-xl  text-gray-500">
               English <br />
