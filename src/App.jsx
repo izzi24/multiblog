@@ -1,7 +1,8 @@
 
 import './App.css'
+import Router from './router/Router'
 // import Footer from './components/Footer'
-import HomePage from './pages/HomePage'
+// import HomePage from './pages/HomePage'
 // import Login from './pages/Login'
 // import Header from './components/Header'
 // import Header2 from './components/Header2'
@@ -16,7 +17,7 @@ function App() {
     {/* <Footer/> */}
       {/* <Header2/> */}
       {/* <Hero/> */}
-      <HomePage/>
+      <Router/>
       {/* <Login/> */}
     </>
   )

@@ -196,7 +196,7 @@ export default function Footer() {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam,
           </p>
-          <div className="flex gap-16 text-3xl py-8 items-center">
+          <div className="flex gap-8 text-2xl py-8 items-center">
             <i className="pi pi-google"></i>
             <i className="pi pi-linkedin"></i>
             <i className="pi pi-twitter"></i>
@@ -294,6 +294,7 @@ export default function Footer() {
           ))}
         </div>
       </div>
+     
     </div>
   );
 }

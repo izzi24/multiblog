@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 // import Header from "../components/Header";
+// import {  useNavigate } from "react-router-dom";
 import Header2 from "../components/Header2";
 import Hero from "../components/Hero";
 import Footer from "../components/Footer";
@@ -42,6 +43,7 @@ import ImgTn from "../images/bax2.png";
 import ImgTo from "../images/bax3.png";
 import ImgTp from "../images/bax4.png";
 import ImgTq from "../images/bax5.png";
+import Footer2 from "../components/Footer2";
 
 const pythons = [
   {
@@ -647,7 +649,7 @@ export default function HomePage() {
       {/* <Header /> */}
       <Header2 />
       <Hero />
-
+      
       <div className=" hidden lg:flex gap-10 font-serif justify-center  overflow-hidden  md:flex   mt-20  w-full">
         <div data-aos="fade-right"   className="pictur bg-white  flex justify-end   h-[30vh] items-center w-[35%]  ">
           <div className="cute text-center pr-10">
@@ -1130,6 +1132,7 @@ export default function HomePage() {
       </div>
       
       <Footer/>
+      <Footer2/>
     </div>
   );
 }

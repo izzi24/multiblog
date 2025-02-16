@@ -144,7 +144,7 @@ export default function Header2() {
   })
 
   return (
-    <div>
+    <div className="">
       <div  data-aos="fade-up-right" className="bg-white  lg:flex md:hidden justify-around hidden text-white   items-center h-[14vh]">
         <div className="flex items-center gap-11">
           {isMenuOpen ? (
@@ -242,6 +242,8 @@ export default function Header2() {
           <div>
             <i className=" text-xl relative cursor-pointer pi pi-shopping-cart">
               <p className="absolute text-md text-white py-1 p-1  bg-red-400 bottom-2 left-3 rounded-xl">
+                0
+              </p> <p className="absolute text-md text-white py-1 p-1  bg-red-400 bottom-2 left-3 rounded-xl">
                 0
               </p>
             </i>

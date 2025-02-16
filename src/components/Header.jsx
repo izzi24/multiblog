@@ -1,3 +1,4 @@
+// import {link, Navigate} from react
 export default function Header() {
   return (
     <div className="bg-[#6c757d53] h-[8vh] flex sm:hidden md:hidden lg:flex justify-evenly items-center  text-lg text-gray-400  ">
