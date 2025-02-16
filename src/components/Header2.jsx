@@ -247,7 +247,7 @@ export default function Header2() {
           </div>
           <div>
             <i className=" text-xl relative cursor-pointer pi pi-shopping-cart">
-              <p className="absolute text-md text-white py-1 p-1  bg-red-400 bottom-2 left-3 rounded-xl">
+              <p className="absolute text-md text-white py-0 p-1  bg-red-400 bottom-2 left-3 rounded-xl">
                 0
               </p>{" "}
               <p className="absolute text-md text-white py-1 p-1  bg-red-400 bottom-2 left-3 rounded-xl">
@@ -473,8 +473,8 @@ export default function Header2() {
               ></i>
             </div>
           )}
-          <div className="flex gap-10 text-xl relative">
-            <p className="absolute text-sm text-white  p-1  bg-red-400 bottom-4 -right-3 rounded-full">
+          <div className="flex gap-10 text-xl items-center relative">
+            <p className="absolute text-sm text-white py-0 p-1  bg-red-400 bottom-4 -right-3 rounded-full">
               0
             </p>
             {openSection === "cart" && (
