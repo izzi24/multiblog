@@ -64,17 +64,17 @@ export default function Login() {
         <div className=" w-[100%]  text-gray-800 text-2xl">
           <p className="font-bold py-3">LOGIN</p>
           <div className=" px-5 py-4 border  w-[100%]">
-            <p className="py-3 font-bold capitalize">email</p>
+            <p className="py-3 font-bold capitalize tracking-wider text-sm">email</p>
             <input
-              className="w-full py-5 border px-3 "
+              className="w-full py-5 text-sm border px-3 "
               type="Email"
               placeholder="Email"
             />
-            <p className="py-3 capitalize font-bold">password</p>
+            <p className="py-3 capitalize tracking-wider text-sm font-bold">password</p>
             <input
-              className="w-full border py-5 px-3 "
+              className="w-full border text-sm py-5 px-3 "
               type="password"
-              placeholder="password"
+              placeholder="Enter your password"
             />
             <div className="py-3">
               <button className="py-4 px-8 border-2 border-white bg-[#ff4000] text-xl text-white font-bold">
